@@ -389,6 +389,22 @@
   transform: translateX(3px);
 }
 
+/* --- Confession / Reconciliation Grid Component --- */
+.confession-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3xl, 48px);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .confession-grid {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    gap: var(--space-xl, 32px) !important;
+  }
+}
+
 /* --- Eucharist Feature Card Component --- */
 .eucharist-card {
   background: var(--color-white, #ffffff);
