@@ -1,0 +1,718 @@
+/* ==========================================================================
+   OUR LADY QUEEN OF PEACE CATHOLIC CHURCH
+   ABOUT PAGE STYLESHEET (css/about.css)
+   Clean, Elite, Semantic, Responsive CSS
+   ========================================================================== */
+
+
+/* --- Common Section Wrappers for About Page --- */
+.about-section {
+  padding: var(--space-4xl) 0;
+  position: relative;
+}
+
+.about-section.bg-ivory {
+  background-color: var(--color-ivory);
+}
+
+.about-section.bg-white {
+  background-color: var(--color-white);
+}
+
+.about-section.bg-cream {
+  background-color: var(--color-cream);
+}
+
+.about-section-intro {
+  max-width: 780px;
+  margin: 0 auto var(--space-3xl) auto;
+  text-align: center;
+}
+
+.about-section-intro .eyebrow {
+  color: var(--color-gold-600);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.about-section-intro h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  color: var(--color-primary-900);
+  margin-bottom: var(--space-sm);
+  line-height: 1.25;
+}
+
+.about-section-intro .lead {
+  font-size: 1.08rem;
+  color: var(--color-charcoal-600);
+  line-height: 1.7;
+}
+
+/* --- Section 1: Welcome / A Place to Belong (Centered Intro + 2-Column Split) --- */
+.about-welcome-center-header {
+  max-width: 840px;
+  margin: 0 auto var(--space-3xl) auto;
+}
+
+.about-welcome-center-header .eyebrow {
+  color: var(--color-gold-600);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.about-welcome-center-header h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  color: var(--color-primary-900);
+  text-align: center;
+  margin-bottom: var(--space-2xs);
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.about-welcome-center-header .welcome-subheading {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-gold-700);
+  text-align: center;
+  margin-bottom: var(--space-md);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.about-welcome-center-header .welcome-lead-text {
+  font-size: 1.06rem;
+  line-height: 1.78;
+  color: var(--color-charcoal-700);
+  text-align: left;
+  margin: 0 auto;
+}
+
+.about-welcome-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-4xl);
+  align-items: center;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.about-welcome-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3 Pillars List: Writeup not in box, clean and elegant */
+.about-welcome-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.about-pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  transition: transform 0.25s ease;
+}
+
+.about-pillar-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-900);
+  color: var(--color-gold-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(11, 44, 74, 0.16);
+  margin-top: 3px;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.about-pillar-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.about-pillar-item:hover .about-pillar-icon {
+  background: var(--color-gold-600);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.about-pillar-body {
+  flex: 1;
+}
+
+.about-pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.about-pillar-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-charcoal-700);
+  margin-bottom: 0;
+}
+
+/* Action Buttons */
+.about-welcome-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-sm);
+}
+
+/* Right Media Column - Matching the First Box (Index Priest Message Frame) */
+.about-welcome-media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-welcome-media .about-image-frame {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 8px solid var(--color-white);
+  box-shadow: var(--shadow-xl), 0 16px 36px rgba(11, 44, 74, 0.16);
+  background: var(--color-primary-950);
+  width: 100%;
+  max-width: 480px;
+  height: 480px;
+}
+
+.about-welcome-media .about-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.about-welcome-media:hover .about-image-frame img {
+  transform: scale(1.02);
+}
+
+.about-image-badge {
+  position: absolute;
+  bottom: -22px;
+  left: 10px;
+  background: var(--color-primary-900);
+  color: var(--color-white);
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-lg);
+  border-left: 5px solid var(--color-gold-500);
+  box-shadow: var(--shadow-lg), 0 8px 24px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  z-index: 2;
+  max-width: 260px;
+}
+
+.about-image-badge .badge-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1.1;
+  color: var(--color-gold-400);
+}
+
+.about-image-badge .badge-subtitle {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 4px;
+  display: block;
+  line-height: 1.35;
+}
+
+/* --- Section 2: Parish Story & The 4 Pillars (Editorial Timeline / Intelligent Container) --- */
+.story-editorial-header {
+  max-width: 840px;
+  margin: 0 auto var(--space-3xl) auto;
+}
+
+.story-editorial-header .eyebrow {
+  color: var(--color-gold-600);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.story-editorial-header h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 2.65rem);
+  color: var(--color-primary-900);
+  text-align: center;
+  margin-bottom: var(--space-md);
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+
+.story-editorial-header .story-lead {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: var(--color-charcoal-700);
+  text-align: left;
+  margin-bottom: var(--space-md);
+}
+
+.story-editorial-header .story-subtext {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--color-charcoal-700);
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/* Intelligent Pillars Container (Centralized, Clean Editorial, No Boxes) */
+.story-pillars-container {
+  max-width: 860px;
+  margin: var(--space-2xl) auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.story-pillar-row {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.story-pillar-label {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-gold-700);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: right;
+  padding-right: 28px;
+  padding-top: 2px;
+  white-space: nowrap;
+}
+
+.story-pillar-content {
+  border-left: 2px solid var(--color-gold-500);
+  padding-left: 28px;
+  padding-bottom: 4px;
+}
+
+.story-pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.story-pillar-text {
+  font-size: 0.98rem;
+  line-height: 1.68;
+  color: var(--color-charcoal-600);
+  margin-bottom: 0;
+}
+
+/* --- Section 3: Mission & Vision Grid --- */
+.about-mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.about-mission-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-primary-900);
+  box-shadow: 0 6px 18px rgba(11, 44, 74, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-mission-card.gold-accent {
+  border-top-color: var(--color-gold-600);
+}
+
+.about-mission-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(11, 44, 74, 0.12);
+}
+
+.about-mission-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-cream-100);
+  border: 1.5px solid var(--color-gold-600);
+  color: var(--color-primary-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.about-mission-icon-wrap svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.about-mission-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--color-primary-900);
+  margin-bottom: var(--space-sm);
+}
+
+.about-mission-card p {
+  color: var(--color-charcoal-600);
+  line-height: 1.7;
+  font-size: 0.96rem;
+  margin-bottom: 0;
+}
+
+/* --- Section 4: Our Patron Saint --- */
+.patron-saint-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.patron-saint-media {
+  text-align: center;
+}
+
+.patron-image-frame {
+  max-width: 440px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 3px solid var(--color-gold-500);
+  box-shadow: 0 14px 34px rgba(11, 44, 74, 0.16);
+  background: var(--color-white);
+}
+
+.patron-image-frame img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.patron-image-caption {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.88rem;
+  color: var(--color-gold-700);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.patron-saint-content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--color-primary-900);
+  margin-bottom: 12px;
+}
+
+.patron-saint-content .lead {
+  color: var(--color-gold-800);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.patron-saint-content p {
+  color: var(--color-charcoal-700);
+  line-height: 1.7;
+}
+
+.patron-prayer-box {
+  background: var(--color-cream-100);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-gold-600);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-sm);
+  margin-top: var(--space-lg);
+}
+
+.patron-prayer-box h5 {
+  font-family: var(--font-heading);
+  color: var(--color-primary-900);
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.patron-prayer-box p {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--color-charcoal-700);
+  margin-bottom: 0;
+}
+
+/* --- Section 5: Pastoral Leadership (Priest) --- */
+.priest-showcase-card {
+  max-width: 980px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(11, 44, 74, 0.08);
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.priest-photo-col {
+  min-height: 400px;
+  background: var(--color-primary-950);
+}
+
+.priest-photo-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+.priest-content-col {
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.priest-role-badge {
+  color: var(--color-gold-700);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.priest-content-col h3 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--color-primary-900);
+  margin-bottom: var(--space-sm);
+}
+
+.priest-content-col p {
+  color: var(--color-charcoal-600);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-sm);
+}
+
+.priest-quote {
+  border-left: 3px solid var(--color-gold-600);
+  padding-left: var(--space-md);
+  margin: var(--space-md) 0;
+  font-style: italic;
+  color: var(--color-primary-800);
+  font-size: 0.98rem;
+}
+
+.priest-actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+  flex-wrap: wrap;
+}
+
+/* --- Section 6: Parish Leadership Council (4 Columns) --- */
+.about-leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.about-leader-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(11, 44, 74, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-leader-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-gold-500);
+  box-shadow: 0 10px 24px rgba(11, 44, 74, 0.12);
+}
+
+.about-leader-photo {
+  height: 220px;
+  overflow: hidden;
+  background: var(--color-primary-950);
+}
+
+.about-leader-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.about-leader-card:hover .about-leader-photo img {
+  transform: scale(1.04);
+}
+
+.about-leader-body {
+  padding: var(--space-lg);
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-leader-body h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-primary-900);
+  margin-bottom: 4px;
+}
+
+.about-leader-role {
+  font-size: 0.78rem;
+  color: var(--color-gold-700);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.about-leader-desc {
+  font-size: 0.88rem;
+  color: var(--color-charcoal-600);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 1024px) {
+  .about-leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .about-welcome-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .about-welcome-media .about-image-frame {
+    min-height: 400px;
+    height: 440px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .about-mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .patron-saint-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .priest-showcase-card {
+    grid-template-columns: 1fr;
+  }
+
+  .priest-photo-col {
+    min-height: 300px;
+    max-height: 380px;
+  }
+
+  .story-pillar-row {
+    grid-template-columns: 140px 1fr;
+  }
+
+  .story-pillar-label {
+    font-size: 1.1rem;
+    padding-right: 20px;
+  }
+
+  .story-pillar-content {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  .about-leadership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-pillar-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .story-pillar-label {
+    text-align: left;
+    padding-right: 0;
+    padding-top: 0;
+    font-size: 1.15rem;
+  }
+
+  .story-pillar-content {
+    border-left: 2px solid var(--color-gold-500);
+    padding-left: 16px;
+    padding-bottom: 8px;
+  }
+}
