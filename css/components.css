@@ -213,6 +213,133 @@
   text-align: right;
 }
 
+/* --- Sacrament Cards Component Styling --- */
+.sacrament-card {
+  background: var(--color-white, #ffffff);
+  border-radius: var(--radius-lg, 16px);
+  border: 1px solid rgba(11, 44, 74, 0.1);
+  box-shadow: 0 10px 30px rgba(11, 44, 74, 0.07);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
+}
+
+.sacrament-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(11, 44, 74, 0.14);
+  border-color: var(--color-gold-500, #d4af37);
+}
+
+.sacrament-img {
+  position: relative;
+  height: 230px;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-primary-950, #061a2e);
+  flex-shrink: 0;
+}
+
+.sacrament-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.sacrament-card:hover .sacrament-img img {
+  transform: scale(1.06);
+}
+
+.sacrament-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(11, 44, 74, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-gold-400, #d4af37);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.sacrament-card .card-body {
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.sacrament-card .card-body h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--color-primary-950, #061a2e);
+  margin-top: 0;
+  margin-bottom: 14px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.sacrament-card .card-body p {
+  font-size: 0.95rem;
+  color: var(--color-charcoal-600, #4a5568);
+  line-height: 1.68;
+  margin-top: 0;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.sacrament-card .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--color-cream-50, #faf8f5);
+  border-top: 1px solid var(--color-border-light, #edf2f7);
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+.sacrament-card .card-footer span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-primary-900, #0b2c4a);
+  background: rgba(11, 44, 74, 0.08);
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.sacrament-card .card-footer a {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-gold-700, #b8860b);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sacrament-card .card-footer a:hover {
+  color: var(--color-primary-900, #0b2c4a);
+  transform: translateX(3px);
+}
+
 .ministry-card {
   display: flex;
   flex-direction: column;
