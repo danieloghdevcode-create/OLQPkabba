@@ -565,11 +565,55 @@
   flex-wrap: wrap;
 }
 
-/* --- Section 6: Parish Leadership Council (4 Columns) --- */
-.about-leadership-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-lg);
+/* --- Section 6: Parish Leadership Pyramid Layout (1 - 2 - 3 Triangle) --- */
+.about-pyramid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xl);
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.pyramid-tier {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--space-xl);
+  width: 100%;
+}
+
+/* Tier 1: Top (1 Card - Assistant Parish Priest) */
+.tier-top {
+  max-width: 360px;
+}
+
+.tier-top .about-leader-card {
+  width: 100%;
+  border-top: 4px solid var(--color-gold-500);
+  box-shadow: 0 8px 24px rgba(11, 44, 74, 0.08);
+}
+
+/* Tier 2: Middle (2 Cards - Catechists) */
+.tier-middle {
+  max-width: 760px;
+}
+
+.tier-middle .about-leader-card {
+  flex: 1 1 320px;
+  max-width: 360px;
+  border-top: 4px solid var(--color-primary-800);
+}
+
+/* Tier 3: Bottom (3 Cards - Presidents: CMO, CWO, CYON) */
+.tier-bottom {
+  max-width: 1140px;
+}
+
+.tier-bottom .about-leader-card {
+  flex: 1 1 290px;
+  max-width: 350px;
+  border-top: 4px solid var(--color-gold-600);
 }
 
 .about-leader-card {
@@ -641,8 +685,9 @@
 
 /* --- Responsive Media Queries --- */
 @media (max-width: 1024px) {
-  .about-leadership-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .tier-bottom {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -692,10 +737,32 @@
   }
 }
 
-@media (max-width: 580px) {
-  .about-leadership-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  .about-pyramid-container {
+    gap: var(--space-xl);
   }
+
+  .pyramid-tier {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+  }
+
+  .tier-top,
+  .tier-middle,
+  .tier-bottom {
+    max-width: 360px;
+    width: 100%;
+  }
+
+  .tier-middle .about-leader-card,
+  .tier-bottom .about-leader-card {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 580px) {
 
   .story-pillar-row {
     display: flex;

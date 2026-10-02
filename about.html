@@ -553,61 +553,96 @@
           <p class="lead">Parish life is built through the commitment and gifts of many people. Alongside pastoral leadership, councils and ministry teams help care for the spiritual, practical, and organisational life of the community.</p>
         </div>
 
-        <div class="about-leadership-grid">
+        <!-- Leadership Triangle / Pyramid Layout (1 Top, 2 Middle, 3 Bottom) -->
+        <div class="about-pyramid-container">
           
-          <!-- Leader 1 -->
-          <div class="about-leader-card">
-            <div class="about-leader-photo">
-              <img src="images/chur images/person/person-m-2.webp"
-                alt="Rev. Fr. Joseph Obi, Assistant Parish Priest"
-                onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80';">
-            </div>
-            <div class="about-leader-body">
-              <h4>Rev. Fr. Joseph Obi</h4>
-              <span class="about-leader-role">Assistant Priest</span>
-              <p class="about-leader-desc">Supporting parish worship, youth accompaniment, and sacramental life.</p>
-            </div>
-          </div>
-
-          <!-- Leader 2 -->
-          <div class="about-leader-card">
-            <div class="about-leader-photo">
-              <img src="images/chur images/person/person-f-5.webp"
-                alt="Dr. Mary Theresa Adebayo, Pastoral Council Vice-Chair"
-                onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80';">
-            </div>
-            <div class="about-leader-body">
-              <h4>Dr. Mary Theresa Adebayo</h4>
-              <span class="about-leader-role">Pastoral Council</span>
-              <p class="about-leader-desc">Guiding pastoral initiatives, community needs, and collaborative parish ministries.</p>
+          <!-- Tier 1: Top (1 Card - Assistant Parish Priest) -->
+          <div class="pyramid-tier tier-top">
+            <div class="about-leader-card">
+              <div class="about-leader-photo">
+                <img src="images/chur images/person/person-m-2.webp"
+                  alt="Rev. Fr. Joseph Obi, Assistant Parish Priest"
+                  onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80';">
+              </div>
+              <div class="about-leader-body">
+                <h4>Rev. Fr. Joseph Obi</h4>
+                <span class="about-leader-role">Assistant Parish Priest</span>
+                <p class="about-leader-desc">Supporting parish worship, youth accompaniment, and sacramental life across the community.</p>
+              </div>
             </div>
           </div>
 
-          <!-- Leader 3 -->
-          <div class="about-leader-card">
-            <div class="about-leader-photo">
-              <img src="images/chur images/person/person-m-8.webp"
-                alt="Sir Augustine Eze, Finance Council Chairman"
-                onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80';">
+          <!-- Tier 2: Middle (2 Cards - Catechists) -->
+          <div class="pyramid-tier tier-middle">
+            <div class="about-leader-card">
+              <div class="about-leader-photo">
+                <img src="images/chur images/person/person-m-5.webp"
+                  alt="Bro. Michael Okon, Senior Catechist"
+                  onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80';">
+              </div>
+              <div class="about-leader-body">
+                <h4>Bro. Michael Okon</h4>
+                <span class="about-leader-role">Senior Catechist</span>
+                <p class="about-leader-desc">Guiding sacramental preparation, baptismal instruction, and adult faith formation.</p>
+              </div>
             </div>
-            <div class="about-leader-body">
-              <h4>Sir Augustine Eze</h4>
-              <span class="about-leader-role">Finance Council</span>
-              <p class="about-leader-desc">Ensuring transparent financial stewardship and sustainable parish development.</p>
+
+            <div class="about-leader-card">
+              <div class="about-leader-photo">
+                <img src="images/chur images/person/person-f-12.webp"
+                  alt="Mrs. Agnes Adeleke, Parish Catechist"
+                  onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80';">
+              </div>
+              <div class="about-leader-body">
+                <h4>Mrs. Agnes Adeleke</h4>
+                <span class="about-leader-role">Parish Catechist</span>
+                <p class="about-leader-desc">Teaching Sunday catechism, Holy Communion classes, and children's spiritual growth.</p>
+              </div>
             </div>
           </div>
 
-          <!-- Leader 4 -->
-          <div class="about-leader-card">
-            <div class="about-leader-photo">
-              <img src="images/chur images/person/person-f-12.webp"
-                alt="Sister Beatrice Nnaji, Director of Religious Education"
-                onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80';">
+          <!-- Tier 3: Bottom (3 Cards - Presidents: CMO, CWO, CYON) -->
+          <div class="pyramid-tier tier-bottom">
+            <!-- CMO President -->
+            <div class="about-leader-card">
+              <div class="about-leader-photo">
+                <img src="images/chur images/person/person-m-8.webp"
+                  alt="Sir Augustine Eze, CMO President"
+                  onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80';">
+              </div>
+              <div class="about-leader-body">
+                <h4>Sir Augustine Eze</h4>
+                <span class="about-leader-role">CMO President</span>
+                <p class="about-leader-desc">Leading the Catholic Men Organization in parish projects, spiritual fellowship, and family stewardship.</p>
+              </div>
             </div>
-            <div class="about-leader-body">
-              <h4>Sister Beatrice Nnaji</h4>
-              <span class="about-leader-role">Faith Formation</span>
-              <p class="about-leader-desc">Nurturing catechism, baptismal preparation, and children's spiritual growth.</p>
+
+            <!-- CWO President -->
+            <div class="about-leader-card">
+              <div class="about-leader-photo">
+                <img src="images/chur images/person/person-f-5.webp"
+                  alt="Lady Mary Theresa Adebayo, CWO President"
+                  onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80';">
+              </div>
+              <div class="about-leader-body">
+                <h4>Lady Mary Theresa Adebayo</h4>
+                <span class="about-leader-role">CWO President</span>
+                <p class="about-leader-desc">Coordinating the Catholic Women Organization in spiritual outreach, welfare, and parish development.</p>
+              </div>
+            </div>
+
+            <!-- CYON President -->
+            <div class="about-leader-card">
+              <div class="about-leader-photo">
+                <img src="images/chur images/person/person-m-12.webp"
+                  alt="Bro. Emmanuel Oladipo, CYON President"
+                  onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80';">
+              </div>
+              <div class="about-leader-body">
+                <h4>Bro. Emmanuel Oladipo</h4>
+                <span class="about-leader-role">CYON President</span>
+                <p class="about-leader-desc">Mobilizing parish youths for active spiritual participation, choir, drama, sports, and community outreach.</p>
+              </div>
             </div>
           </div>
 
