@@ -694,10 +694,11 @@
   display: block;
 }
 
-/* Shift badge up when card is clicked active */
+/* Shift badge / hide when card is clicked active so Name & Title are not repeated */
 .about-leader-card.active .about-leader-badge {
-  transform: translateY(-62px);
-  background: linear-gradient(to top, rgba(11, 44, 74, 0.88) 0%, transparent 100%);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
 }
 
 /* Sliding Action Buttons Popup Box on Click */
@@ -709,7 +710,7 @@
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 14px 14px;
+  padding: 16px 18px;
   text-align: center;
   border-top: 3px solid var(--color-gold-500);
   transform: translateY(102%);
@@ -727,42 +728,26 @@
   opacity: 1;
 }
 
-.about-leader-body h4 {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  color: var(--color-primary-900);
-  margin-bottom: 4px;
-}
-
-.about-leader-role {
-  font-size: 0.78rem;
-  color: var(--color-gold-700);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  display: block;
-  margin-bottom: 4px;
-}
-
 .leader-actions-row {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin-top: 10px;
+  gap: 10px;
+  margin-top: 0;
   width: 100%;
 }
 
 .leader-btn {
-  flex: 1;
+  width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 9px 12px;
+  gap: 8px;
+  padding: 10px 16px;
   border-radius: 999px;
   font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   text-decoration: none;
   transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
