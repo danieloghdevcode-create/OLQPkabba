@@ -243,6 +243,36 @@ p:last-child {
   border-radius: 2px;
 }
 
+/* Section Intro & Header Typography Spacing */
+.section-intro {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.section-intro .eyebrow {
+  margin-bottom: 12px;
+}
+
+.section-intro h2 {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  color: var(--color-primary-950);
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.section-intro .lead,
+.section-intro p {
+  font-size: 1.05rem;
+  color: var(--color-charcoal-600);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
 /* --------------------------------------------------------------------------
    TOP LITURGICAL INFORMATION BAR
    -------------------------------------------------------------------------- */
