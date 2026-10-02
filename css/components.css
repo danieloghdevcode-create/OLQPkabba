@@ -353,7 +353,7 @@
 .sacrament-card .card-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 12px;
   padding: 16px 24px;
   background: var(--color-cream-50, #faf8f5);
