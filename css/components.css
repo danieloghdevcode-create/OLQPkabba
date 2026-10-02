@@ -392,16 +392,43 @@
 /* --- Confession / Reconciliation Grid Component --- */
 .confession-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-3xl, 48px);
-  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header image"
+    "plan   image";
+  gap: var(--space-md, 16px) var(--space-3xl, 48px);
+  align-items: start;
+}
+
+.confession-header {
+  grid-area: header;
+}
+
+.confession-plan-box {
+  grid-area: plan;
+}
+
+.confession-image-col {
+  grid-area: image;
 }
 
 @media (max-width: 900px) {
   .confession-grid {
     display: flex !important;
-    flex-direction: column-reverse !important;
+    flex-direction: column !important;
     gap: var(--space-xl, 32px) !important;
+  }
+
+  .confession-header {
+    order: 1 !important;
+  }
+
+  .confession-image-col {
+    order: 2 !important;
+  }
+
+  .confession-plan-box {
+    order: 3 !important;
   }
 }
 
