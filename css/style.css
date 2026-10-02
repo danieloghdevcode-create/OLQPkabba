@@ -205,8 +205,37 @@ p:last-child {
 .bg-cream-light { background-color: var(--color-cream-light); }
 .bg-cream-50 { background-color: var(--color-cream-50); }
 .bg-ivory { background-color: var(--color-ivory); }
+.bg-warm { background-color: var(--color-ivory, #faf7f0); }
 .bg-white { background-color: var(--color-white); }
-.bg-primary-dark { background-color: var(--color-primary-900); color: var(--color-white); }
+.bg-burgundy { background-color: var(--color-primary-900, #0b2c4a); color: var(--color-white); }
+.bg-primary-dark { background-color: var(--color-primary-900, #0b2c4a); color: var(--color-white); }
+
+/* Liturgical Section Divider Component */
+.liturgical-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--space-md, 16px) auto var(--space-lg, 24px);
+  width: 100%;
+  max-width: 340px;
+}
+
+.liturgical-divider::before,
+.liturgical-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-500, #d4af37), transparent);
+}
+
+.liturgical-divider span {
+  padding: 0 16px;
+  font-family: var(--font-accent, 'Cormorant Garamond', serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  color: var(--color-gold-400, #e2c45f);
+}
 
 .grid {
   display: grid;
