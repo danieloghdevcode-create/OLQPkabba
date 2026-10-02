@@ -340,6 +340,56 @@
   transform: translateX(3px);
 }
 
+/* --- Eucharist Feature Card Component --- */
+.eucharist-card {
+  background: var(--color-white, #ffffff);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-top: 4px solid var(--color-gold-500, #d4af37);
+  border-radius: var(--radius-xl, 20px);
+  padding: 52px 40px;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 14px 40px rgba(11, 44, 74, 0.07);
+}
+
+.eucharist-card .eyebrow {
+  color: var(--color-gold-600, #b8860b);
+  margin-bottom: 12px;
+}
+
+.eucharist-card h2 {
+  font-family: var(--font-heading);
+  color: var(--color-primary-950, #061a2e);
+  font-size: 2.35rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.eucharist-card p.lead {
+  font-size: 1.12rem;
+  font-weight: 500;
+  color: var(--color-primary-900, #0b2c4a);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.eucharist-card p {
+  font-size: 1.02rem;
+  color: var(--color-charcoal-600, #4a5568);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.eucharist-card .eucharist-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md, 16px);
+  flex-wrap: wrap;
+}
+
 .ministry-card {
   display: flex;
   flex-direction: column;
