@@ -80,11 +80,12 @@ function initMobileNav() {
 
   overlay.addEventListener('click', closeDrawer);
 
-  // Close on Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && (drawer.classList.contains('is-open') || drawer.classList.contains('is-active'))) {
+  // Close drawer when clicking any page link
+  const drawerLinks = drawer.querySelectorAll('.mobile-nav-link, .mobile-drawer-footer a');
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', () => {
       closeDrawer();
-    }
+    });
   });
 
   // Mobile Accordion Sub-menus
