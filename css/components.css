@@ -37,6 +37,12 @@
   margin: 0 auto;
 }
 
+.page-hero h1,
+.hero-title {
+  color: var(--color-white) !important;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.75);
+}
+
 .breadcrumb,
 .breadcrumbs {
   display: flex;
