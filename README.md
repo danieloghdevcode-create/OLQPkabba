@@ -14,8 +14,6 @@ Official parish website for Our Lady Queen of Peace Catholic Church.
 - `about.html` — About Parish & History
 - `worship.html` — Mass Times & Liturgy
 - `ministries.html` — Parish Ministries & Societies
-- `events.html` / `calendar.html` — Events & Calendar
-- `bulletin.html` — Weekly Bulletins
 - `give.html` — Online Giving & Donations
 - `contact.html` — Contact Information & Parish Office
 - `prayer-request.html` — Prayer Requests
