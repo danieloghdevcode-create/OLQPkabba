@@ -562,6 +562,11 @@
   border-color: var(--color-gold-500, #d4af37);
 }
 
+.schedule-row-main {
+  flex: 1;
+  min-width: 0;
+}
+
 .schedule-row-main strong {
   display: block;
   font-size: 1.05rem;
@@ -574,6 +579,33 @@
   color: var(--color-charcoal-600, #4a5568);
   margin: 0;
   line-height: 1.5;
+}
+
+/* Combined Sunday Mass Schedule Grid (West & East Columns) */
+.sunday-mass-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+.sunday-col-east {
+  border-left: 1px solid var(--color-border-light, #edf2f7);
+  padding-left: 24px;
+}
+
+@media (max-width: 640px) {
+  .sunday-mass-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sunday-col-east {
+    border-left: none;
+    border-top: 1px solid var(--color-border-light, #edf2f7);
+    padding-left: 0;
+    padding-top: 16px;
+  }
 }
 
 @media (max-width: 640px) {
