@@ -764,6 +764,31 @@
   background: var(--color-primary-800) !important;
 }
 
+/* Ministry Meeting Schedule Badge & Icon */
+.ministry-meeting {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-gold-700, #b8860b);
+  background: rgba(212, 175, 55, 0.08);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  margin-bottom: var(--space-sm);
+  line-height: 1.3;
+}
+
+.ministry-meeting svg {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
 .card:hover,
 .schedule-card:hover,
 .ministry-card:hover,
