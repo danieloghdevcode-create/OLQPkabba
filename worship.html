@@ -231,83 +231,94 @@
           <p class="lead">The Eucharist is at the heart of our Catholic life. Please contact the parish office to confirm current schedules before your visit.</p>
         </div>
 
-        <div class="card-grid-3">
-          <div class="schedule-card">
-            <div class="schedule-header">
-              <div class="schedule-icon-wrap">
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 2L10 8H4L9 12L7 18L12 14L17 18L15 12L20 8H14L12 2Z" />
-                </svg>
-              </div>
-              <div>
-                <h3>Sunday Mass</h3>
-                <span style="font-size: 0.78rem; color: var(--color-gold-800); font-weight: 700; text-transform: uppercase;">Confirm Current Times</span>
-              </div>
+        <!-- Liturgical Tab Navigation -->
+        <div class="liturgical-tabs-wrapper">
+          <div class="liturgical-tabs-nav" role="tablist">
+            <button class="liturgical-tab-btn active" data-tab="tab-sunday" role="tab" aria-selected="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L10 8H4L9 12L7 18L12 14L17 18L15 12L20 8H14L12 2Z"/></svg>
+              Sunday Mass
+            </button>
+            <button class="liturgical-tab-btn" data-tab="tab-weekday" role="tab" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z"/></svg>
+              Weekday Worship
+            </button>
+            <button class="liturgical-tab-btn" data-tab="tab-reconciliation" role="tab" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+              Reconciliation
+            </button>
+          </div>
+
+          <!-- Tab 1: Sunday Mass -->
+          <div class="liturgical-tab-panel active" id="tab-sunday" role="tabpanel">
+            <div class="tab-panel-header">
+              <h3>Sunday Liturgies &amp; Mass Schedule</h3>
+              <span class="tab-status-badge">Confirm Current Times</span>
             </div>
-            <div class="schedule-times">
-              <div class="schedule-item">
-                <span class="schedule-time-badge">Contact Office</span>
-                <span class="schedule-label">Ask about Sunday Mass</span>
+            <div class="schedule-list-view">
+              <div class="schedule-row">
+                <div class="schedule-row-main">
+                  <strong>Sunday Holy Mass Gathering</strong>
+                  <p>Celebration of the Holy Eucharist with preaching, music, and community prayer.</p>
+                </div>
+                <div class="schedule-row-action">
+                  <a href="https://wa.me/2348065542337?text=Hello%2C%20I%20would%20like%20to%20confirm%20Sunday%20Mass%20times." target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold btn-sm">Confirm Mass Time &rarr;</a>
+                </div>
               </div>
-              <div class="schedule-item">
-                <span class="schedule-time-badge">Schedule varies</span>
-                <span class="schedule-label">Confirm before visiting</span>
-              </div>
-              <div class="schedule-item">
-                <span class="schedule-time-badge">Need details?</span>
-                <span class="schedule-label">Contact the parish office</span>
+              <div class="schedule-row">
+                <div class="schedule-row-main">
+                  <strong>Parish Office Guidance</strong>
+                  <p>Mass schedules may vary during liturgical feast days. Please confirm before visiting.</p>
+                </div>
+                <div class="schedule-row-action">
+                  <a href="contact.html" class="btn btn-primary btn-sm">Contact Parish Office</a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="schedule-card">
-            <div class="schedule-header">
-              <div class="schedule-icon-wrap">
-                <svg viewBox="0 0 24 24">
-                  <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z" />
-                </svg>
-              </div>
-              <div>
-                <h3>Weekday Worship</h3>
-                <span style="font-size: 0.78rem; color: var(--color-gold-800); font-weight: 700; text-transform: uppercase;">Contact for Schedule</span>
-              </div>
+          <!-- Tab 2: Weekday Worship -->
+          <div class="liturgical-tab-panel" id="tab-weekday" role="tabpanel">
+            <div class="tab-panel-header">
+              <h3>Daily Mass &amp; Eucharistic Worship</h3>
+              <span class="tab-status-badge">Contact for Schedule</span>
             </div>
-            <div class="schedule-times">
-              <div class="schedule-item">
-                <span class="schedule-time-badge">Please Confirm</span>
-                <span class="schedule-label">Ask about weekday Mass</span>
+            <div class="schedule-list-view">
+              <div class="schedule-row">
+                <div class="schedule-row-main">
+                  <strong>Weekday Holy Mass</strong>
+                  <p>Daily Eucharistic celebration for spiritual nourishment during the week.</p>
+                </div>
+                <div class="schedule-row-action">
+                  <a href="https://wa.me/2348065542337?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20weekday%20Mass%20times." target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold btn-sm">Ask About Weekday Mass &rarr;</a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="schedule-card">
-            <div class="schedule-header">
-              <div class="schedule-icon-wrap">
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
-                </svg>
-              </div>
-              <div>
-                <h3>Reconciliation</h3>
-                <span style="font-size: 0.78rem; color: var(--color-gold-800); font-weight: 700; text-transform: uppercase;">Contact for Availability</span>
-              </div>
+          <!-- Tab 3: Reconciliation -->
+          <div class="liturgical-tab-panel" id="tab-reconciliation" role="tabpanel">
+            <div class="tab-panel-header">
+              <h3>Sacrament of Reconciliation (Confession)</h3>
+              <span class="tab-status-badge">By Arrangement</span>
             </div>
-            <div class="schedule-times">
-              <div class="schedule-item">
-                <span class="schedule-time-badge">Please Confirm</span>
-                <span class="schedule-label">Ask about Reconciliation</span>
+            <div class="schedule-list-view">
+              <div class="schedule-row">
+                <div class="schedule-row-main">
+                  <strong>Sacramental Confession &amp; Absolution</strong>
+                  <p>Receive God's mercy and grace. Available by arrangement or before scheduled services.</p>
+                </div>
+                <div class="schedule-row-action">
+                  <a href="https://wa.me/2348065542337?text=Hello%2C%20I%20would%20like%20to%20arrange%20a%20time%20for%20Reconciliation." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Arrange Confession &rarr;</a>
+                </div>
               </div>
-              <div class="schedule-item">
-                <span class="schedule-time-badge">By arrangement</span>
-                <span class="schedule-label">Contact the parish office</span>
-              </div>
-              <div class="schedule-item">
-                <span class="schedule-time-badge">Need guidance?</span>
-                <span class="schedule-label">We are glad to help</span>
-              </div>
-              <div class="schedule-item">
-                <span class="schedule-time-badge">Before you visit</span>
-                <span class="schedule-label">Confirm current availability</span>
+              <div class="schedule-row">
+                <div class="schedule-row-main">
+                  <strong>Pastoral Direction &amp; Guidance</strong>
+                  <p>Our parish priest is available for spiritual direction and questions.</p>
+                </div>
+                <div class="schedule-row-action">
+                  <a href="contact.html" class="btn btn-primary btn-sm">Contact Priest</a>
+                </div>
               </div>
             </div>
           </div>

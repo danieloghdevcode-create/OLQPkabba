@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initAutoScrollTracks();
   initQuickAccessMobileSliding();
+  initLiturgicalTabs();
 });
 
 function removeExternalImages() {
@@ -547,6 +548,39 @@ function initQuickAccessMobileSliding() {
 
   window.addEventListener('orientationchange', () => {
     setTimeout(equalizeHeights, 150);
+  });
+}
+
+/**
+  * Interactive Liturgical Tabs Handler
+  */
+function initLiturgicalTabs() {
+  const tabBtns = document.querySelectorAll('.liturgical-tab-btn');
+  const tabPanels = document.querySelectorAll('.liturgical-tab-panel');
+  if (!tabBtns.length || !tabPanels.length) return;
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = btn.getAttribute('data-tab');
+      if (!targetId) return;
+
+      tabBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      tabPanels.forEach(p => {
+        p.classList.remove('active');
+      });
+
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+      }
+    });
   });
 }
 
