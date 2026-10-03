@@ -257,6 +257,11 @@
   line-height: 1.35;
 }
 
+/* Mobile-only sanctuary image block inside Our Story heading */
+.story-mobile-media {
+  display: none;
+}
+
 /* --- Section 2: Parish Story & The 4 Pillars (Editorial Timeline / Intelligent Container) --- */
 .story-editorial-header {
   max-width: 840px;
@@ -839,6 +844,37 @@
 }
 
 @media (max-width: 768px) {
+  /* On mobile view, hide the welcome section image so it appears only in Our Story between heading & writeup */
+  .about-welcome-grid .about-welcome-media {
+    display: none;
+  }
+
+  .story-mobile-media {
+    display: block;
+    position: relative;
+    margin: var(--space-xl) auto var(--space-2xl) auto;
+    width: 100%;
+    max-width: 440px;
+  }
+
+  .story-mobile-media .about-image-frame {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 6px solid var(--color-white);
+    box-shadow: var(--shadow-xl), 0 16px 36px rgba(11, 44, 74, 0.16);
+    background: var(--color-primary-950);
+    width: 100%;
+    height: 380px;
+  }
+
+  .story-mobile-media .about-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
   .about-pyramid-container {
     gap: var(--space-xl);
   }
