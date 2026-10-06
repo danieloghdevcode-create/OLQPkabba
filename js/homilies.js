@@ -183,7 +183,7 @@ function initHomilyPlayerModal() {
   playButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const title = btn.getAttribute('data-title') || 'Sunday Homily';
-      const speaker = btn.getAttribute('data-speaker') || 'Rev. Fr. Casmir Okonkwo';
+      const speaker = btn.getAttribute('data-speaker') || 'Very Rev. Fr. Michael Eniolorunda';
       const scripture = btn.getAttribute('data-scripture') || 'Holy Gospel';
 
       if (modalTitle) modalTitle.textContent = title;
