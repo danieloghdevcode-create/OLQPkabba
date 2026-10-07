@@ -83,7 +83,7 @@ function handleFormSuccess(form) {
   // If form is configured for direct WhatsApp delivery
   if (form.getAttribute('data-whatsapp') === 'true') {
     const waNumber = form.getAttribute('data-whatsapp-number') || '2348065542337';
-    let messageText = "Hello Catechist / Parish Secretariat,\nI am submitting a request from the church website:\n\n";
+    let messageText = "Good day Catechist,\nI am submitting a request from the church website:\n\n";
 
     const nameInput = form.querySelector('[name="requestor_name"]') || form.querySelector('[name="name"]') || form.querySelector('#requestor-name');
     const phoneInput = form.querySelector('[name="phone"]') || form.querySelector('#requestor-phone');
