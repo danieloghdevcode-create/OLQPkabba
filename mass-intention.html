@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Request a Holy Mass intention at Our Lady Queen of Peace Catholic Church for deceased loved ones, thanksgiving, healing, birthdays, or special intentions.">
-  <title>Request a Mass Intention | Our Lady Queen of Peace Catholic Church</title>
+  <meta name="description" content="Request a Holy Mass intention or submit a parish prayer request at Our Lady Queen of Peace Catholic Church, Kabba for deceased loved ones, thanksgiving, healing, or special needs.">
+  <title>Mass Intentions & Prayer Requests | Our Lady Queen of Peace Catholic Church</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
     </div>
     <div class="top-bar-links">
       <a href="worship.html">Mass Schedule</a>
-      <a href="prayer-request.html">Prayer Requests</a>
+      <a href="mass-intention.html">Intentions & Prayers</a>
       <a href="give.html">Online Giving</a>
     </div>
   </div>
@@ -81,8 +81,7 @@
               <a href="worship.html#mass-schedule" class="dropdown-item">Mass Schedule</a>
               <a href="worship.html#confession" class="dropdown-item">Sacrament of Reconciliation</a>
               <a href="worship.html#sacraments" class="dropdown-item">Holy Sacraments</a>
-              <a href="mass-intention.html" class="dropdown-item active">Request Mass Intention</a>
-              <a href="prayer-request.html" class="dropdown-item">Submit Prayer Request</a>
+              <a href="mass-intention.html" class="dropdown-item active">Mass Intentions & Prayers</a>
             </div>
           </li>
 
@@ -103,20 +102,9 @@
           </li>
 
           <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-          <li class="nav-item"><a href="mass-intention.html" class="nav-link active">Mass Intention</a></li>
-
-          <li class="nav-item has-dropdown">
-            <button type="button" class="nav-link" aria-haspopup="true">
-              More
-              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
-            </button>
-            <div class="dropdown-menu dropdown-right">
-              <a href="prayer-request.html" class="dropdown-item">Submit Prayer Request</a>
-              <a href="give.html" class="dropdown-item">Give / Online Offering</a>
-              <a href="contact.html" class="dropdown-item">Contact & Office Hours</a>
-              <a href="https://wa.me/2348065542337?text=Hello%20Catechist%2C%20I%20would%20like%20to%20register%20as%20a%20new%20parishioner." target="_blank" rel="noopener noreferrer" class="dropdown-item">Parish Registration (WhatsApp)</a>
-            </div>
-          </li>
+          <li class="nav-item"><a href="mass-intention.html" class="nav-link active">Intentions & Prayers</a></li>
+          <li class="nav-item"><a href="give.html" class="nav-link">Give</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
@@ -141,8 +129,7 @@
       <div class="mobile-nav-item"><a href="worship.html" class="mobile-nav-link">Worship & Sacraments</a></div>
       <div class="mobile-nav-item"><a href="ministries.html" class="mobile-nav-link">Ministries</a></div>
       <div class="mobile-nav-item"><a href="gallery.html" class="mobile-nav-link">Gallery</a></div>
-      <div class="mobile-nav-item"><a href="mass-intention.html" class="mobile-nav-link active">Mass Intentions</a></div>
-      <div class="mobile-nav-item"><a href="prayer-request.html" class="mobile-nav-link">Prayer Requests</a></div>
+      <div class="mobile-nav-item"><a href="mass-intention.html" class="mobile-nav-link active">Intentions & Prayer Requests</a></div>
       <div class="mobile-nav-item"><a href="give.html" class="mobile-nav-link">Give Online</a></div>
       <div class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact & Office Hours</a></div>
     </div>
@@ -151,11 +138,11 @@
     </div>
   </aside>
 
-  <!-- MAIN CONTENT: MASS INTENTION PAGE (BUILD ORDER ITEM 10) -->
+  <!-- MAIN CONTENT: MASS INTENTIONS & PRAYER REQUESTS PAGE -->
   <main id="main-content">
 
     <!-- Hero Section -->
-    <section class="page-hero" aria-label="Mass Intention Hero">
+    <section class="page-hero" aria-label="Mass Intentions & Prayer Requests Hero">
       <div class="container">
         <div class="page-hero-content">
           <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -163,57 +150,158 @@
             <span class="breadcrumb-separator">›</span>
             <a href="worship.html">Worship</a>
             <span class="breadcrumb-separator">›</span>
-            <span class="breadcrumb-current">Mass Intention</span>
+            <span class="breadcrumb-current">Mass Intentions & Prayers</span>
           </nav>
-          <h1>Request a Mass Intention</h1>
-          <p class="page-hero-desc">Entrust a special intention to the prayers of the Church. Contact the parish office to confirm availability and arrangements.</p>
+          <h1>Mass Intentions & Prayer Requests</h1>
+          <p class="page-hero-desc">Entrust your intentions to the Holy Sacrifice of the Mass or share a prayer petition with our parish community. We stand united with you in faith and prayer.</p>
         </div>
       </div>
-    </section><section class="section-padding bg-cream">
+    </section>
+
+    <!-- Main Section: Guidance + Interactive Form -->
+    <section class="section-padding bg-cream">
       <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-3xl); align-items: flex-start;"><div>
-            <span class="eyebrow">Prayer & Worship</span>
-            <h2>Offer a Mass Intention</h2>
-            <p class="lead">The Mass is at the heart of our life of prayer. You may request an intention for a loved one, in thanksgiving, or for another special need.</p>
-            <p>Submit your request below. The parish office will follow up to confirm availability and next steps.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-3xl); align-items: flex-start;">
+          
+          <!-- Left Column: Spiritual Guidance & Categories -->
+          <div>
+            <span class="eyebrow">Faith & Intercession</span>
+            <h2>How Can We Pray With You?</h2>
+            <p class="lead">The Holy Mass is the highest form of prayer in the Catholic Church. In addition, our parish community gathers daily to hold your petitions in prayer.</p>
+            <p>Select the type of request you wish to submit below. The parish office will handle your petition with pastoral care and reverence.</p>
 
-            <div style="display: flex; flex-direction: column; gap: var(--space-sm); margin: var(--space-lg) 0;">
-              <div style="background: var(--color-white); border-left: 3px solid var(--color-burgundy-800); padding: 12px 16px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
-                <strong style="color: var(--color-burgundy-900);">For a Loved One</strong>
-                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0;">Remember someone living or deceased in the prayers of the Church.</p>
+            <div style="display: flex; flex-direction: column; gap: var(--space-md); margin: var(--space-lg) 0;">
+              
+              <div style="background: var(--color-white); border-left: 4px solid var(--color-burgundy-800); padding: 16px var(--space-md); border-radius: 0 var(--radius-md) var(--radius-md) 0; box-shadow: var(--shadow-sm);">
+                <h4 style="color: var(--color-burgundy-900); margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+                  <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: var(--color-burgundy-800);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                  Holy Mass Intentions
+                </h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5;">
+                  Have the Priest offer the Holy Sacrifice of the Mass specifically for your intention — for the repose of a deceased soul, in thanksgiving for God's blessings, for healing, or for a birthday/anniversary.
+                </p>
               </div>
 
-              <div style="background: var(--color-white); border-left: 3px solid var(--color-gold-600); padding: 12px 16px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
-                <strong style="color: var(--color-burgundy-900);">In Thanksgiving</strong>
-                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0;">Offer a prayer of gratitude for a blessing or milestone.</p>
+              <div style="background: var(--color-white); border-left: 4px solid var(--color-gold-600); padding: 16px var(--space-md); border-radius: 0 var(--radius-md) var(--radius-md) 0; box-shadow: var(--shadow-sm);">
+                <h4 style="color: var(--color-burgundy-900); margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+                  <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: var(--color-gold-600);"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                  Chapel & Community Prayer Requests
+                </h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.5;">
+                  Place a personal prayer petition into our Adoration Chapel Prayer Box and commend it to the maternal intercession of Our Lady Queen of Peace and our parish prayer groups.
+                </p>
               </div>
 
-              <div style="background: var(--color-white); border-left: 3px solid var(--season-ordinary); padding: 12px 16px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
-                <strong style="color: var(--color-burgundy-900);">For a Special Need</strong>
-                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0;">Bring a personal intention to prayer through the celebration of Mass.</p>
-              </div>
-            </div><div style="background: var(--color-gold-100); border: 1.5px solid var(--color-gold-600); border-radius: var(--radius-md); padding: var(--space-md); margin-top: var(--space-lg);">
-              <h5 style="color: var(--color-gold-900); font-family: var(--font-serif); margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
-                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> Please Note</h5>
-              <p style="font-size: 0.85rem; color: var(--color-charcoal-700); margin-bottom: 0; line-height: 1.6;">
-                <strong>Submitting a request does not reserve a date.</strong> The parish office will contact you to discuss availability and any arrangements.</p>
             </div>
-          </div><div>
-            <div class="form-container">
-              <div class="form-header">
-                <span class="eyebrow" style="margin-bottom: 4px;">Mass Intention</span>
-                <h3 style="font-size: 1.6rem; color: var(--color-burgundy-900);">Share Your Request</h3>
-                <p style="font-size: 0.9rem; color: var(--color-charcoal-600);">Provide the requested information and the parish team will follow up.</p>
-              </div></div>
+
+            <div style="background: var(--color-gold-100); border: 1.5px solid var(--color-gold-600); border-radius: var(--radius-md); padding: var(--space-md); margin-top: var(--space-lg);">
+              <h5 style="color: var(--color-gold-900); font-family: var(--font-serif); margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                Important Parish Notice
+              </h5>
+              <p style="font-size: 0.86rem; color: var(--color-charcoal-700); margin-bottom: 0; line-height: 1.6;">
+                <strong>Mass Intention Scheduling:</strong> Submitting a request online sends your petition directly to the parish office. Mass dates are confirmed based on liturgical calendar availability. You can also make your stipend offering at the parish office or via our online giving portal.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Merged Interactive Submission Form -->
+          <div>
+            <div class="form-container" style="background: var(--color-white); border-radius: var(--radius-lg); padding: var(--space-xl); box-shadow: var(--shadow-md); border: 1px solid var(--color-cream-300);">
+              <div class="form-header" style="margin-bottom: var(--space-lg);">
+                <span class="eyebrow" style="margin-bottom: 4px;">Online Submission</span>
+                <h3 style="font-size: 1.7rem; color: var(--color-burgundy-900); font-family: var(--font-serif);">Submit Your Intention or Prayer</h3>
+                <p style="font-size: 0.9rem; color: var(--color-charcoal-600);">Fill out the form below. Your request will be processed reverently by our parish office.</p>
+              </div>
+
+              <form action="#" method="POST" data-validate="true" data-success-modal="intention-success-modal">
+                
+                <!-- Request Type Selection -->
+                <div class="form-group" style="margin-bottom: var(--space-md);">
+                  <label for="request-type" style="font-weight: 600; color: var(--color-burgundy-900); display: block; margin-bottom: 6px;">Select Request Type <span style="color: var(--color-burgundy-800);">*</span></label>
+                  <select id="request-type" name="request_type" required class="form-control" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-cream-300); border-radius: var(--radius-sm); font-family: inherit;">
+                    <option value="mass_intention">Holy Mass Intention (Offered at Mass)</option>
+                    <option value="prayer_request">General Prayer Request (Chapel Prayer Box)</option>
+                    <option value="both">Both (Mass Intention + Chapel Prayer Box)</option>
+                  </select>
+                </div>
+
+                <!-- Intention Category -->
+                <div class="form-group" style="margin-bottom: var(--space-md);">
+                  <label for="intention-category" style="font-weight: 600; color: var(--color-burgundy-900); display: block; margin-bottom: 6px;">Intention Category <span style="color: var(--color-burgundy-800);">*</span></label>
+                  <select id="intention-category" name="category" required class="form-control" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-cream-300); border-radius: var(--radius-sm); font-family: inherit;">
+                    <option value="">-- Choose Category --</option>
+                    <option value="deceased">Repose of the Soul (Deceased Loved One)</option>
+                    <option value="thanksgiving">Thanksgiving & Blessings</option>
+                    <option value="healing">Healing, Health & Recovery</option>
+                    <option value="birthday">Birthday / Anniversary / Special Occasion</option>
+                    <option value="special_need">Special Intention / Guidance / Family Need</option>
+                  </select>
+                </div>
+
+                <!-- Intention Details / For Whom -->
+                <div class="form-group" style="margin-bottom: var(--space-md);">
+                  <label for="intention-for" style="font-weight: 600; color: var(--color-burgundy-900); display: block; margin-bottom: 6px;">Intention Title / For Whom <span style="color: var(--color-burgundy-800);">*</span></label>
+                  <input type="text" id="intention-for" name="intention_for" required placeholder="e.g. For the Soul of Late Pa John Okafor / In Thanksgiving for Family" class="form-control" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-cream-300); border-radius: var(--radius-sm); font-family: inherit;">
+                </div>
+
+                <!-- Preferred Date / Mass Service -->
+                <div class="form-group" style="margin-bottom: var(--space-md);">
+                  <label for="preferred-date" style="font-weight: 600; color: var(--color-burgundy-900); display: block; margin-bottom: 6px;">Preferred Date / Mass Service (Optional)</label>
+                  <input type="date" id="preferred-date" name="preferred_date" class="form-control" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-cream-300); border-radius: var(--radius-sm); font-family: inherit;">
+                </div>
+
+                <!-- Contact Name -->
+                <div class="form-group" style="margin-bottom: var(--space-md);">
+                  <label for="requestor-name" style="font-weight: 600; color: var(--color-burgundy-900); display: block; margin-bottom: 6px;">Your Full Name <span style="color: var(--color-burgundy-800);">*</span></label>
+                  <input type="text" id="requestor-name" name="requestor_name" required placeholder="Enter your full name" class="form-control" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-cream-300); border-radius: var(--radius-sm); font-family: inherit;">
+                </div>
+
+                <!-- Phone / Email Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-md);">
+                  <div class="form-group">
+                    <label for="requestor-phone" style="font-weight: 600; color: var(--color-burgundy-900); display: block; margin-bottom: 6px;">Phone / WhatsApp <span style="color: var(--color-burgundy-800);">*</span></label>
+                    <input type="tel" id="requestor-phone" name="phone" required placeholder="080 1234 5678" class="form-control" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-cream-300); border-radius: var(--radius-sm); font-family: inherit;">
+                  </div>
+                  <div class="form-group">
+                    <label for="requestor-email" style="font-weight: 600; color: var(--color-burgundy-900); display: block; margin-bottom: 6px;">Email Address</label>
+                    <input type="email" id="requestor-email" name="email" placeholder="name@example.com" class="form-control" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-cream-300); border-radius: var(--radius-sm); font-family: inherit;">
+                  </div>
+                </div>
+
+                <!-- Additional Details / Prayer Wording -->
+                <div class="form-group" style="margin-bottom: var(--space-lg);">
+                  <label for="intention-message" style="font-weight: 600; color: var(--color-burgundy-900); display: block; margin-bottom: 6px;">Additional Notes / Prayer Message</label>
+                  <textarea id="intention-message" name="message" rows="3" placeholder="Share any specific notes, dates, or intentions for the parish priest or prayer intercessors..." class="form-control" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-cream-300); border-radius: var(--radius-sm); font-family: inherit; resize: vertical;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full" style="width: 100%; padding: 14px; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-radius: var(--radius-sm);">
+                  Submit Request & Intention
+                </button>
+              </form>
+            </div>
           </div>
 
         </div>
       </div>
     </section>
 
+    <!-- Inspiring Scripture & Spiritual Reflection -->
+    <section class="section-padding bg-white">
+      <div class="container text-center">
+        <div style="max-width: 780px; margin: 0 auto;">
+          <div class="liturgical-divider"><span>Holy Eucharist & Prayer</span></div>
+          <blockquote style="font-family: var(--font-serif-body); font-size: 1.6rem; line-height: 1.5; color: var(--color-burgundy-900); margin-bottom: var(--space-md); font-style: italic;">
+            "The prayer of the humble pierces the clouds, and it will not rest until it reaches its goal."
+          </blockquote>
+          <span style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase; color: var(--color-gold-800); letter-spacing: 0.1em;">Sirach 35:17 • Our Lady Queen of Peace Catholic Church</span>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Respectful Mass Intention Confirmation Modal -->
+  <!-- Respectful Confirmation Modal -->
   <div class="modal-overlay" id="intention-success-modal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-dialog" style="text-align: center; padding: var(--space-2xl);">
       <button class="modal-close-btn" aria-label="Close modal">
@@ -224,16 +312,16 @@
         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
       </div>
 
-      <h3 style="color: var(--color-burgundy-900); margin-bottom: var(--space-xs); font-size: 1.6rem;">Mass Intention Successfully Submitted</h3>
+      <h3 style="color: var(--color-burgundy-900); margin-bottom: var(--space-xs); font-size: 1.6rem;">Request Successfully Received</h3>
       <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6; margin-bottom: var(--space-md);">
-        Thank you. Your Holy Mass intention has been received by the parish secretary. We will check the parish liturgical calendar and confirm the date and time via email/phone.
+        Thank you. Your Holy Mass intention / prayer petition has been received by our parish team. We will check the parish liturgical calendar and confirm arrangements with you.
       </p>
 
       <div style="background: var(--color-cream-100); border-radius: var(--radius-sm); padding: var(--space-md); margin-bottom: var(--space-lg); font-size: 0.88rem; color: var(--color-charcoal-700);">
-        <em>"May the souls of the faithful departed, through the mercy of God, rest in eternal peace."</em>
+        <em>"May the peace of Christ, which surpasses all understanding, guard your heart and mind." (Philippians 4:7)</em>
       </div>
 
-      <button type="button" class="btn btn-primary btn-close-modal">Return to Worship Page</button>
+      <button type="button" class="btn btn-primary btn-close-modal">Return in Peace</button>
     </div>
   </div>
 
@@ -274,9 +362,8 @@
             <a href="worship.html">Mass & Sacraments</a>
             <a href="ministries.html">Parish Ministries</a>
             <a href="gallery.html">Parish Gallery</a>
+            <a href="mass-intention.html">Intentions & Prayers</a>
             <a href="give.html">Stewardship / Give</a>
-            <a href="prayer-request.html">Prayer Requests</a>
-            <a href="mass-intention.html">Mass Intentions</a>
             <a href="contact.html">Contact Us</a>
           </div>
         </div>
@@ -302,7 +389,7 @@
             </div>
           </div>
           <div style="margin-top: 14px;">
-            <a href="mass-intention.html" style="font-size: 0.82rem; color: var(--color-gold-400); text-decoration: underline;">Book a Mass Intention &rarr;</a>
+            <a href="mass-intention.html" style="font-size: 0.82rem; color: var(--color-gold-400); text-decoration: underline;">Request Intention or Prayer &rarr;</a>
           </div>
         </div>
 
