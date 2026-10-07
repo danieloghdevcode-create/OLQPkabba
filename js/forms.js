@@ -101,7 +101,13 @@ function handleFormSuccess(form) {
 
     const encodedMessage = encodeURIComponent(messageText);
     const waUrl = `https://wa.me/${waNumber}?text=${encodedMessage}`;
-    window.open(waUrl, '_blank');
+    
+    // Reset form fields
+    form.reset();
+
+    // Direct redirect to WhatsApp immediately (no modal)
+    window.location.href = waUrl;
+    return;
   }
 
   const modalId = form.getAttribute('data-success-modal');
