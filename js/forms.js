@@ -80,6 +80,30 @@ function validateEmail(email) {
  * 2. Form Submission Success & Modal Handler
  */
 function handleFormSuccess(form) {
+  // If form is configured for direct WhatsApp delivery
+  if (form.getAttribute('data-whatsapp') === 'true') {
+    const waNumber = form.getAttribute('data-whatsapp-number') || '2348065542337';
+    let messageText = "Hello Catechist / Parish Secretariat,\nI am submitting a request from the church website:\n\n";
+
+    const nameInput = form.querySelector('[name="requestor_name"]') || form.querySelector('[name="name"]') || form.querySelector('#requestor-name');
+    const phoneInput = form.querySelector('[name="phone"]') || form.querySelector('#requestor-phone');
+    const detailsInput = form.querySelector('[name="intention_for"]') || form.querySelector('[name="message"]') || form.querySelector('#intention-for');
+
+    if (nameInput && nameInput.value.trim()) {
+      messageText += `*Name:* ${nameInput.value.trim()}\n`;
+    }
+    if (phoneInput && phoneInput.value.trim()) {
+      messageText += `*Phone:* ${phoneInput.value.trim()}\n`;
+    }
+    if (detailsInput && detailsInput.value.trim()) {
+      messageText += `*Details / Intention:* ${detailsInput.value.trim()}\n`;
+    }
+
+    const encodedMessage = encodeURIComponent(messageText);
+    const waUrl = `https://wa.me/${waNumber}?text=${encodedMessage}`;
+    window.open(waUrl, '_blank');
+  }
+
   const modalId = form.getAttribute('data-success-modal');
   let targetModal = modalId ? document.getElementById(modalId) : null;
   if (!targetModal) targetModal = document.getElementById('generic-success-modal');
