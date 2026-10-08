@@ -132,6 +132,7 @@
     </div>
   </aside>
 
+  <main id="main-content">
   <section class="page-hero home-hero" style="min-height: 85vh; display: flex; align-items: center; background-image: linear-gradient(rgba(6, 26, 46, 0.48), rgba(6, 26, 46, 0.68)), url('images/hero.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; padding: var(--space-4xl) 0;">
     <div class="container hero-content" style="max-width: 920px;">
       <div class="hero-badge" style="letter-spacing: 0.16em;">Ad Majorem Dei Gloriam &bull;  Diocese of Lokoja</div>
@@ -243,7 +244,7 @@
 
         <div style="position: relative;">
           <div style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-xl); border: 8px solid var(--color-white); background: #7ab3e0;">
-            <img src="images/holy mary.png" alt="Our Lady Queen of Peace - Holy Mary" style="width: 100%; height: 480px; object-fit: cover; object-position: center top; display: block;">
+            <img src="images/holy mary.png" alt="Our Lady Queen of Peace - Holy Mary" style="width: 100%; height: 480px; object-fit: cover; object-position: center top; display: block;" loading="eager" fetchpriority="high" decoding="async" width="934" height="1230">
           </div>
           <!-- Decorative Stat Overlay Card -->
           <div style="position: absolute; bottom: -24px; left: -24px; background: var(--color-primary-900); color: var(--color-white); padding: var(--space-xl) var(--space-2xl); border-radius: var(--radius-lg); border-left: 5px solid var(--color-gold-500); box-shadow: var(--shadow-lg); max-width: 280px;">
@@ -458,7 +459,7 @@
         </div>
 
       </div>
-      <div class="carousel-dots" aria-label="Photo gallery carousel navigation"></div>
+      <div class="carousel-dots" role="group" aria-label="Photo gallery carousel navigation"></div>
     </div>
   </section>
 
@@ -508,6 +509,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- Global Footer -->
   <footer class="site-footer">

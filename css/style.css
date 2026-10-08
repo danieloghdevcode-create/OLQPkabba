@@ -25,8 +25,8 @@
 
   /* Liturgical Gold Accents */
   --color-gold-800: #7d5b03;
-  --color-gold-700: #946c05;
-  --color-gold-600: #b8860b; /* Sanctuary Gold */
+  --color-gold-700: #855b00;
+  --color-gold-600: #855b00; /* Sanctuary Gold - WCAG AA High Contrast */
   --color-gold-500: #d4af37; /* Liturgical Gold Accent */
   --color-gold-400: #e2c45f;
   --color-gold-300: #edd88d;
@@ -674,14 +674,18 @@ p:last-child {
   display: flex;
   flex-direction: column;
   z-index: 1030;
-  transition: right 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: right 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.32s;
   overflow-y: auto;
   padding: var(--space-xl) var(--space-lg);
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .mobile-nav-drawer.is-active,
 .mobile-nav-drawer.is-open {
   right: 0 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 .mobile-nav-list {
