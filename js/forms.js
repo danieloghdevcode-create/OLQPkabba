@@ -83,11 +83,12 @@ function handleFormSuccess(form) {
   // If form is configured for direct WhatsApp delivery
   if (form.getAttribute('data-whatsapp') === 'true') {
     const waNumber = form.getAttribute('data-whatsapp-number') || '2348065542337';
-    let messageText = "Good day Catechist,\nI am submitting a request from the church website:\n\n";
+    let messageText = "Good day Catechist,\nI am sending a message from the church website:\n\n";
 
-    const nameInput = form.querySelector('[name="requestor_name"]') || form.querySelector('[name="name"]') || form.querySelector('#requestor-name');
-    const phoneInput = form.querySelector('[name="phone"]') || form.querySelector('#requestor-phone');
-    const detailsInput = form.querySelector('[name="intention_for"]') || form.querySelector('[name="message"]') || form.querySelector('#intention-for');
+    const nameInput = form.querySelector('[name="requestor_name"]') || form.querySelector('[name="name"]') || form.querySelector('#requestor-name') || form.querySelector('#contact-name');
+    const phoneInput = form.querySelector('[name="phone"]') || form.querySelector('#requestor-phone') || form.querySelector('#contact-phone');
+    const subjectInput = form.querySelector('[name="subject"]') || form.querySelector('#contact-subject');
+    const detailsInput = form.querySelector('[name="intention_for"]') || form.querySelector('[name="message"]') || form.querySelector('#intention-for') || form.querySelector('#contact-message');
 
     if (nameInput && nameInput.value.trim()) {
       messageText += `*Name:* ${nameInput.value.trim()}\n`;
@@ -95,8 +96,11 @@ function handleFormSuccess(form) {
     if (phoneInput && phoneInput.value.trim()) {
       messageText += `*Phone:* ${phoneInput.value.trim()}\n`;
     }
+    if (subjectInput && subjectInput.value.trim()) {
+      messageText += `*Subject:* ${subjectInput.value.trim()}\n`;
+    }
     if (detailsInput && detailsInput.value.trim()) {
-      messageText += `*Details / Intention:* ${detailsInput.value.trim()}\n`;
+      messageText += `*Message / Details:* ${detailsInput.value.trim()}\n`;
     }
 
     const encodedMessage = encodeURIComponent(messageText);

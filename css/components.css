@@ -45,14 +45,7 @@
 
 .breadcrumb,
 .breadcrumbs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: var(--space-md);
-  flex-wrap: wrap;
+  display: none !important;
 }
 
 .breadcrumb a,

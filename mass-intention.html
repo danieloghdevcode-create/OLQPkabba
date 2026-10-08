@@ -141,15 +141,8 @@
     <section class="page-hero" aria-label="Mass Intentions & Prayer Requests Hero">
       <div class="container">
         <div class="page-hero-content">
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="index.html">Home</a>
-            <span class="breadcrumb-separator">›</span>
-            <a href="worship.html">Worship</a>
-            <span class="breadcrumb-separator">›</span>
-            <span class="breadcrumb-current">Mass Intentions & Prayers</span>
-          </nav>
           <h1>Mass Intentions & Prayer Requests</h1>
-          <p class="page-hero-desc">Entrust your intentions to the Holy Sacrifice of the Mass or share a prayer petition with our parish community. Simply choose a button below to request easily via WhatsApp, phone, or direct form.</p>
+          <p class="page-hero-desc">Entrust your intentions and prayer petitions to our parish community.</p>
         </div>
       </div>
     </section>
@@ -260,39 +253,39 @@
       </div>
     </section>
 
-    <!-- Section 2: Ultra-Simple Web Form (For non-WhatsApp Users) -->
+    <!-- Section 2: Direct Web Form -->
     <section class="section-padding bg-white">
       <div class="container">
-        <div style="max-width: 680px; margin: 0 auto; background: var(--color-cream-100); border-radius: var(--radius-lg); padding: var(--space-2xl); border: 1px solid var(--color-cream-300); box-shadow: var(--shadow-sm);">
+        <div style="max-width: 680px; margin: 0 auto; background: var(--color-white); border-radius: var(--radius-lg); padding: var(--space-xl); border: 1px solid var(--color-border); box-shadow: var(--shadow-md);">
           
-          <div class="text-center" style="margin-bottom: var(--space-xl);">
-            <span class="eyebrow">Alternative Web Form</span>
-            <h3 style="font-size: 1.8rem; color: var(--color-burgundy-900); font-family: var(--font-serif); margin-bottom: 6px;">Submit Direct Web Request</h3>
-            <p style="font-size: 0.92rem; color: var(--text-muted);">Fill out these 3 simple details and click submit. Our parish office will receive it immediately.</p>
+          <div class="form-header text-center" style="margin-bottom: var(--space-lg);">
+            <span class="eyebrow" style="color: var(--color-gold-600); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.12em; display: block; margin-bottom: 4px;">Submit Intention</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--color-primary-900); margin-bottom: 4px;">Submit Mass Intention</h3>
           </div>
 
           <form action="#" method="POST" data-validate="true" data-whatsapp="true" data-whatsapp-number="2348065542337">
             
             <!-- Full Name -->
             <div class="form-group" style="margin-bottom: var(--space-md);">
-              <label for="requestor-name" style="font-weight: 700; color: var(--color-burgundy-900); display: block; margin-bottom: 6px;">1. Your Full Name <span style="color: var(--color-burgundy-800);">*</span></label>
-              <input type="text" id="requestor-name" name="requestor_name" required placeholder="e.g. Chief / Mr / Mrs John Doe" class="form-control" style="width: 100%; padding: 14px; border: 1.5px solid var(--color-cream-400); border-radius: var(--radius-sm); font-size: 1rem;">
+              <label for="requestor-name" class="form-label" style="display: block; font-size: 0.88rem; font-weight: 700; color: var(--color-primary-900); margin-bottom: 6px;">Full Name <span style="color: var(--color-error, #d9534f);">*</span></label>
+              <input type="text" id="requestor-name" name="requestor_name" class="form-control" placeholder="Enter your full name" required style="width: 100%; padding: 12px 16px; border: 1.5px solid var(--color-border); border-radius: var(--radius-sm); font-size: 0.95rem; box-sizing: border-box;">
             </div>
 
             <!-- Phone Number -->
             <div class="form-group" style="margin-bottom: var(--space-md);">
-              <label for="requestor-phone" style="font-weight: 700; color: var(--color-burgundy-900); display: block; margin-bottom: 6px;">2. Phone or WhatsApp Number <span style="color: var(--color-burgundy-800);">*</span></label>
-              <input type="tel" id="requestor-phone" name="phone" required placeholder="e.g. 08012345678" class="form-control" style="width: 100%; padding: 14px; border: 1.5px solid var(--color-cream-400); border-radius: var(--radius-sm); font-size: 1rem;">
+              <label for="requestor-phone" class="form-label" style="display: block; font-size: 0.88rem; font-weight: 700; color: var(--color-primary-900); margin-bottom: 6px;">Phone Number (Optional)</label>
+              <input type="tel" id="requestor-phone" name="phone" class="form-control" placeholder="+234..." style="width: 100%; padding: 12px 16px; border: 1.5px solid var(--color-border); border-radius: var(--radius-sm); font-size: 0.95rem; box-sizing: border-box;">
             </div>
 
-            <!-- Intention Type & Details -->
+            <!-- Intention Details -->
             <div class="form-group" style="margin-bottom: var(--space-lg);">
-              <label for="intention-for" style="font-weight: 700; color: var(--color-burgundy-900); display: block; margin-bottom: 6px;">3. Mass Intention Details / For Whom <span style="color: var(--color-burgundy-800);">*</span></label>
-              <textarea id="intention-for" name="intention_for" rows="3" required placeholder="e.g. Mass for Late Pa John Okafor (Deceased) on Sunday 12th Oct, OR Thanksgiving for Birthday of Mary" class="form-control" style="width: 100%; padding: 14px; border: 1.5px solid var(--color-cream-400); border-radius: var(--radius-sm); font-size: 1rem; resize: vertical;"></textarea>
+              <label for="intention-for" class="form-label" style="display: block; font-size: 0.88rem; font-weight: 700; color: var(--color-primary-900); margin-bottom: 6px;">Mass Intention / Prayer Details <span style="color: var(--color-error, #d9534f);">*</span></label>
+              <textarea id="intention-for" name="intention_for" rows="4" class="form-control" placeholder="Type your intention or prayer request here..." required style="width: 100%; padding: 12px 16px; border: 1.5px solid var(--color-border); border-radius: var(--radius-sm); font-size: 0.95rem; resize: vertical; box-sizing: border-box;"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-full" style="width: 100%; padding: 16px; font-size: 1.05rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-radius: var(--radius-sm); background: var(--color-burgundy-900);">
-              Submit Intention Request Now
+            <button type="submit" class="btn btn-primary btn-full" style="width: 100%; padding: 14px; font-weight: 700; font-size: 1rem; border-radius: var(--radius-sm); display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+              <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              Submit Intention via WhatsApp
             </button>
           </form>
 
@@ -431,7 +424,7 @@
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <div>
-          &copy; 2026 Our Lady Queen of Peace Catholic Church. All rights reserved. | <a href="https://wa.me/23490139075105?text=Hello%20DanielWebStudio" target="_blank" rel="noopener noreferrer" style="color: var(--color-gold-400); font-weight: 600; text-decoration: none;">Design by DanielWebStudio</a>
+          &copy; 2026 Our Lady Queen of Peace Catholic Church. All rights reserved. | <a href="https://wa.me/2349139075105?text=Hello%20DanielWebStudio" target="_blank" rel="noopener noreferrer" style="color: var(--color-gold-400); font-weight: 600; text-decoration: none;">Design by DanielWebStudio</a>
         </div>
         <div class="footer-bottom-links">
           <a href="contact.html">Privacy Policy</a>

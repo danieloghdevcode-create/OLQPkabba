@@ -393,6 +393,7 @@ p:last-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-lg);
   height: var(--header-height);
   transition: height 0.3s ease;
 }
@@ -468,6 +469,7 @@ p:last-child {
 /* Desktop Navigation */
 .desktop-nav {
   display: block;
+  margin-left: auto;
 }
 
 .nav-menu {
