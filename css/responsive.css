@@ -309,6 +309,7 @@ html {
     margin-bottom: var(--space-xs) !important;
   }
 
+  .footer-column h3,
   .footer-column h4 {
     font-size: 1.05rem !important;
     margin-bottom: var(--space-md) !important;

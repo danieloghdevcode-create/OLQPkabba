@@ -29,11 +29,18 @@ function initStickyHeader() {
   const header = document.querySelector('.site-header');
   if (!header) return;
 
+  let ticking = false;
   const handleScroll = () => {
-    if (window.scrollY > 35) {
-      header.classList.add('scrolled', 'is-scrolled');
-    } else {
-      header.classList.remove('scrolled', 'is-scrolled');
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        if (window.scrollY > 35) {
+          header.classList.add('scrolled', 'is-scrolled');
+        } else {
+          header.classList.remove('scrolled', 'is-scrolled');
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
   };
 

@@ -1001,6 +1001,7 @@ p:last-child {
   transform: translateY(-2px);
 }
 
+.footer-column h3,
 .footer-column h4 {
   font-family: var(--font-heading);
   font-size: 1.15rem;
@@ -1010,6 +1011,7 @@ p:last-child {
   padding-bottom: var(--space-xs);
 }
 
+.footer-column h3::after,
 .footer-column h4::after {
   content: '';
   position: absolute;
