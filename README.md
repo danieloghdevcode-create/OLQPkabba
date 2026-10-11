@@ -8,6 +8,7 @@
 
 ## Project Overview
 Official parish website for Our Lady Queen of Peace Catholic Church.
+- Facebook: [https://www.facebook.com/profile.php?id=61594591557774](https://www.facebook.com/profile.php?id=61594591557774)
 
 ### Project Structure & Pages
 - `index.html` — Homepage
@@ -18,7 +19,6 @@ Official parish website for Our Lady Queen of Peace Catholic Church.
 - `contact.html` — Contact Information & Parish Office
 - `prayer-request.html` — Prayer Requests
 - `mass-intention.html` — Mass Intentions
-- `gallery.html` — Church Photo Gallery
 - `css/` — Stylesheets
 - `js/` — Client-side scripts
 - `images/` — Assets and photographs

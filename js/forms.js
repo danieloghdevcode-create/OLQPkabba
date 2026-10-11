@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initFormValidation();
   initGivingPresets();
+  initBankDonationModal();
 });
 
 /**
@@ -190,3 +191,98 @@ function initGivingPresets() {
     });
   });
 }
+
+/**
+ * 4. Direct Parish Bank Donation Modal Handler
+ */
+function initBankDonationModal() {
+  const modal = document.getElementById('bank-details-modal');
+  if (!modal) return;
+
+  const openBtns = document.querySelectorAll('[data-open-bank-modal], a[href="#bank-details"]');
+  const closeBtns = modal.querySelectorAll('.modal-close-btn, .btn-close-modal');
+  const copyBtn = document.getElementById('copy-acc-btn');
+  const accNumberEl = document.getElementById('bank-acc-num');
+  const copyFeedback = document.getElementById('copy-feedback');
+  const copyBtnText = document.getElementById('copy-btn-text');
+
+  function openModal(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    modal.classList.add('is-active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', openModal);
+  });
+
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', closeModal);
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target.classList.contains('modal-overlay')) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+      closeModal();
+    }
+  });
+
+  // Check URL hash on page load
+  if (window.location.hash === '#bank-details') {
+    setTimeout(openModal, 150);
+  }
+
+  // Copy account number handler
+  if (copyBtn && accNumberEl) {
+    copyBtn.addEventListener('click', () => {
+      const textToCopy = accNumberEl.textContent.trim();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          showCopiedState();
+        }).catch(() => {
+          fallbackCopy(textToCopy);
+        });
+      } else {
+        fallbackCopy(textToCopy);
+      }
+    });
+  }
+
+  function fallbackCopy(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+      document.execCommand('copy');
+      showCopiedState();
+    } catch (err) {
+      console.error('Copy failed', err);
+    }
+    document.body.removeChild(textarea);
+  }
+
+  function showCopiedState() {
+    if (copyBtnText) copyBtnText.textContent = 'Copied! ✓';
+    if (copyFeedback) copyFeedback.style.display = 'block';
+    setTimeout(() => {
+      if (copyBtnText) copyBtnText.textContent = 'Copy';
+      if (copyFeedback) copyFeedback.style.display = 'none';
+    }, 2500);
+  }
+}
+

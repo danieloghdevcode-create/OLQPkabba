@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Support the liturgical worship, parish maintenance, and charitable outreach of Our Lady Queen of Peace Catholic Church. Learn about Sunday tithes, bank transfer, and online giving options.">
-  <title>Stewardship & Online Giving | Our Lady Queen of Peace Catholic Church</title>
+  <title>Support Our Parish & Stewardship | Our Lady Queen of Peace Catholic Church</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@
     <div class="top-bar-links">
       <a href="worship.html">Mass Schedule</a>
       <a href="mass-intention.html">Intentions & Prayers</a>
-      <a href="give.html">Online Giving</a>
+      <a href="give.html">Support Our Parish</a>
     </div>
   </div>
 
@@ -75,12 +75,11 @@
 
           <li class="nav-item has-dropdown">
             <a href="worship.html" class="nav-link">
-              Worship
+              Mass
               <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
             </a>
             <div class="dropdown-menu">
               <a href="worship.html#mass-schedule" class="dropdown-item">Mass Schedule</a>
-              <a href="worship.html#confession" class="dropdown-item">Sacrament of Reconciliation</a>
               <a href="worship.html#sacraments" class="dropdown-item">Holy Sacraments</a>
               <a href="mass-intention.html" class="dropdown-item">Mass Intentions & Prayers</a>
             </div>
@@ -96,9 +95,8 @@
             </button>
             <div class="dropdown-menu dropdown-right">
               <a href="ministries.html" class="dropdown-item">Ministries</a>
-              <a href="gallery.html" class="dropdown-item">Gallery</a>
               <a href="mass-intention.html" class="dropdown-item">Intentions & Prayers</a>
-              <a href="give.html" class="dropdown-item active">Give / Online Offering</a>
+              <a href="give.html" class="dropdown-item active">Support & Offerings</a>
               <a href="https://wa.me/2348065542337?text=Hello%20Catechist%2C%20I%20would%20like%20to%20register%20as%20a%20new%20parishioner." target="_blank" rel="noopener noreferrer" class="dropdown-item">Parish Registration (WhatsApp)</a>
             </div>
           </li>
@@ -108,7 +106,7 @@
       <div class="header-actions">
         <a href="give.html" class="btn-give-nav">
           <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-          Give
+          Support
         </a>
         <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -123,11 +121,10 @@
     <div class="mobile-nav-list">
       <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></div>
       <div class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About Us</a></div>
-      <div class="mobile-nav-item"><a href="worship.html" class="mobile-nav-link">Worship & Sacraments</a></div>
+      <div class="mobile-nav-item"><a href="worship.html" class="mobile-nav-link">Mass & Sacraments</a></div>
       <div class="mobile-nav-item"><a href="ministries.html" class="mobile-nav-link">Ministries</a></div>
-      <div class="mobile-nav-item"><a href="gallery.html" class="mobile-nav-link">Gallery</a></div>
       <div class="mobile-nav-item"><a href="mass-intention.html" class="mobile-nav-link">Intentions & Prayer Requests</a></div>
-      <div class="mobile-nav-item"><a href="give.html" class="mobile-nav-link active">Give Online</a></div>
+      <div class="mobile-nav-item"><a href="give.html" class="mobile-nav-link active">Support Our Parish</a></div>
       <div class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact & Office Hours</a></div>
     </div>
     <div class="mobile-drawer-footer">
@@ -150,13 +147,13 @@
       <div class="container">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-3xl); align-items: center;">
           <div>
-            <span class="eyebrow">Stewardship</span>
-            <h2>A Grateful Community</h2>
-            <p class="lead">Giving is one way to share the gifts we have received and support the mission of our parish.</p>
-            <p>Please contact the parish office for verified giving options. No payment details are collected on this page.</p>
+            <span class="eyebrow">Christian Stewardship</span>
+            <h2>Honor God With a Joyful Heart</h2>
+            <p class="lead">"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver." &mdash; <em>2 Corinthians 9:7</em></p>
+            <p>Every offering, tithe, and sacrificial gift keeps our altar sacred, sustains our priests, shelters the poor, and builds God’s house in Kabba. Your generosity touches real souls and echoes in eternity.</p>
             <div style="display: flex; gap: var(--space-md); margin-top: var(--space-lg); flex-wrap: wrap;">
-              <a href="#payment-methods" class="btn btn-primary">Giving Guidance</a>
-              <a href="#transparency" class="btn btn-outline">Learn About Stewardship</a>
+              <button type="button" class="btn btn-primary btn-donate-trigger" data-open-bank-modal aria-haspopup="dialog">Parish Account Details</button>
+              <a href="#giving-options" class="btn btn-outline">Areas of Need</a>
             </div>
           </div>
 
@@ -197,12 +194,23 @@
             </div>
           </div>
         </div>
+
+        <!-- Centered Direct Donation Callout at End of Section -->
+        <div class="section-donate-callout" style="margin-top: var(--space-3xl); padding-top: var(--space-xl); border-top: 1px dashed var(--color-border); text-align: center;">
+          <p style="font-size: 1.05rem; color: var(--color-charcoal-700); margin-bottom: var(--space-sm); font-weight: 600;">
+            Ready to plant a seed of faith and support our parish home?
+          </p>
+          <button type="button" class="btn btn-primary btn-lg btn-donate-trigger" data-open-bank-modal aria-haspopup="dialog" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; box-shadow: var(--shadow-md); font-weight: 700; letter-spacing: 0.04em;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span>Contribute</span>
+          </button>
+        </div>
       </div>
     </section><section class="section-padding bg-white" id="giving-options">
       <div class="container">
         <div class="section-intro">
           <span class="eyebrow">Ways to Support</span>
-          <h2>Give with Care</h2>
+          <h2>Support with Care</h2>
           <p>Ask the parish office about current ways to contribute and how your support serves our community.</p>
         </div>
 
@@ -214,7 +222,7 @@
                 <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0;">Partner with us in sustaining parish worship, sacred traditions, and community care.</p>
               </div>
               <div class="card-footer" style="margin-top: var(--space-md);">
-                <a href="https://wa.me/2348065542337?text=Hello%20Catechist%2C%20I%20would%20like%20to%20ask%20about%20giving%20and%20supporting%20the%20parish." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-full">Ask About Giving</a>
+                <a href="https://wa.me/2348065542337?text=Hello%20Catechist%2C%20I%20would%20like%20to%20ask%20about%20giving%20and%20supporting%20the%20parish." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-full">Ask About Supporting</a>
               </div>
             </div>
           </div>
@@ -243,22 +251,109 @@
             </div>
           </div>
         </div>
+
+        <!-- Centered Direct Donation Callout at End of Section -->
+        <div class="section-donate-callout" style="margin-top: var(--space-3xl); padding-top: var(--space-xl); border-top: 1px dashed var(--color-border); text-align: center;">
+          <p style="font-size: 1.05rem; color: var(--color-charcoal-700); margin-bottom: var(--space-sm); font-weight: 600;">
+            May God multiply every seed you sow &mdash; transfer directly to the parish account:
+          </p>
+          <button type="button" class="btn btn-primary btn-lg btn-donate-trigger" data-open-bank-modal aria-haspopup="dialog" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; box-shadow: var(--shadow-md); font-weight: 700; letter-spacing: 0.04em;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span>Contribute</span>
+          </button>
+        </div>
       </div>
     </section><section class="cta-banner">
       <div class="container">
         <div class="cta-content">
           <span class="eyebrow" style="color: var(--color-gold-400);">Thank You</span>
           <h2>Every Gift Makes a Difference</h2>
-          <p>For giving questions or to learn about other ways to serve, please contact the parish office.</p>
+          <p>For support questions or to learn about other ways to serve, please contact the parish office.</p>
           <div class="cta-actions">
-            <a href="contact.html?subject=Estate+Giving" class="btn btn-primary btn-lg">Discuss Giving</a>
+            <a href="contact.html?subject=Estate+Giving" class="btn btn-primary btn-lg">Discuss Support</a>
             <a href="about.html" class="btn btn-white btn-lg">Learn About Our Parish</a>
           </div>
+
         </div>
       </div>
     </section>
 
   </main>
+
+  <!-- Parish Bank Account Details Modal -->
+  <div id="bank-details"></div>
+  <div class="modal-overlay" id="bank-details-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bank-modal-title">
+    <div class="modal-dialog bank-modal-dialog">
+      <div class="bank-modal-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--color-gold-500); display: flex; align-items: center; justify-content: center; color: var(--color-primary-950); flex-shrink: 0;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <div>
+            <h3 id="bank-modal-title" style="color: white; margin: 0; font-size: 1.25rem; font-family: var(--font-heading); line-height: 1.2;">Direct Parish Contribution</h3>
+            <span style="font-size: 0.8rem; color: var(--color-gold-400);">Official Bank Wire & Mobile Transfer</span>
+          </div>
+        </div>
+        <button type="button" class="modal-close-btn" aria-label="Close modal" style="color: white; background: rgba(255,255,255,0.15); border: none; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s;">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+
+      <div class="bank-modal-body">
+        <p style="font-size: 0.95rem; color: var(--color-charcoal-700); margin-bottom: var(--space-lg); line-height: 1.5;">
+          You can transfer your contributions, tithes, thanksgiving, or offerings directly to the official parish bank account:
+        </p>
+
+        <!-- Official Bank Account Card -->
+        <div class="bank-card-container">
+          <div style="margin-bottom: var(--space-md);">
+            <span class="bank-field-label">Bank Name</span>
+            <span class="bank-field-val">First Bank of Nigeria</span>
+          </div>
+
+          <div style="margin-bottom: var(--space-md);">
+            <span class="bank-field-label">Account Name</span>
+            <span class="bank-field-val">Our Lady Queen of Peace</span>
+          </div>
+
+          <div>
+            <span class="bank-field-label">Account Number</span>
+            <div class="bank-acc-row">
+              <span id="bank-acc-num" class="bank-acc-number">2009918887</span>
+              <button type="button" id="copy-acc-btn" class="btn btn-sm btn-secondary" style="padding: 6px 14px; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px;" aria-label="Copy Account Number">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                <span id="copy-btn-text">Copy</span>
+              </button>
+            </div>
+            <div id="copy-feedback" style="display: none; font-size: 0.82rem; color: var(--color-success); font-weight: 600; margin-top: 6px;">
+              ✓ Account number copied to clipboard!
+            </div>
+          </div>
+        </div>
+
+        <!-- Note specified by User -->
+        <div class="bank-note-box">
+          <div style="display: flex; gap: 10px; align-items: flex-start;">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="#855b00" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <div>
+              <strong style="color: #634300; display: block; font-size: 0.95rem; margin-bottom: 2px;">Please Note:</strong>
+              <p style="margin: 0; font-size: 0.92rem; color: #523700; line-height: 1.45;">
+                Please indicate why you send this money in your bank transfer narration / remarks (e.g., <em>Sunday Tithe</em>, <em>Building Project</em>, <em>Thanksgiving</em>, <em>Mass Offering</em>, or <em>Charity</em>).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap; justify-content: flex-end; align-items: center; margin-top: var(--space-lg);">
+          <a href="https://wa.me/2348065542337?text=Hello%20Catechist%2C%20I%20have%20sent%20a%20direct%20parish%20contribution%20to%20First%20Bank%202009918887.%20Here%20are%20my%20details:" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.9rem;">
+            Send Receipt via WhatsApp &rarr;
+          </a>
+          <button type="button" class="btn btn-primary btn-close-modal" style="font-size: 0.9rem;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Generic Success / Confirmation Modal -->
   <div class="modal-overlay" id="generic-success-modal" aria-hidden="true" role="dialog" aria-modal="true">
@@ -301,7 +396,7 @@
             <a href="mailto:queenofpeace2006@yahoo.com" aria-label="Email Us">
               <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             </a>
-            <a href="#" aria-label="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61594591557774" target="_blank" rel="noopener noreferrer" aria-label="Official Facebook Page">
               <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
             </a>
           </div>
@@ -313,15 +408,14 @@
             <a href="about.html">About Us</a>
             <a href="worship.html">Mass & Sacraments</a>
             <a href="ministries.html">Parish Ministries</a>
-            <a href="gallery.html">Parish Gallery</a>
             <a href="mass-intention.html">Intentions & Prayers</a>
-            <a href="give.html">Stewardship / Give</a>
+            <a href="give.html">Stewardship & Support</a>
             <a href="contact.html">Contact Us</a>
           </div>
         </div>
 
         <div class="footer-column">
-          <h3>Worship Schedule</h3>
+          <h3>Mass Schedule</h3>
           <div class="footer-schedule-card">
             <div class="footer-schedule-row">
               <span class="footer-schedule-day">Sunday</span>
@@ -334,10 +428,6 @@
             <div class="footer-schedule-row">
               <span class="footer-schedule-day">Saturday</span>
               <span class="footer-schedule-time">7:00 AM & 5:30 PM (Vigil)</span>
-            </div>
-            <div class="footer-schedule-row">
-              <span class="footer-schedule-day">Confession</span>
-              <span class="footer-schedule-time">Sat 4:00 PM / By Appt</span>
             </div>
           </div>
           <div style="margin-top: 14px;">
