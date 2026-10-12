@@ -1,0 +1,49 @@
+# ==============================================================================
+# OUR LADY QUEEN OF PEACE CATHOLIC CHURCH — APACHE / LITESPEED SECURITY CONFIG
+# ==============================================================================
+
+# 1. Prevent Directory Browsing
+Options -Indexes
+
+# 2. Block Access to Hidden Directories & Sensitive Files (.git, .git/*, .env, etc.)
+# Fully blocks all nested paths under .git (such as .git/HEAD, .git/config, .git/index)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Deny access to any directory or file starting with a dot anywhere in the URI path
+    RewriteRule "(^|/)\." - [F,L]
+</IfModule>
+
+# Defense-in-depth fallback using RedirectMatch (works if mod_rewrite is inactive)
+RedirectMatch 403 "(^|/)\..*"
+
+# Block access to hidden files and sensitive extensions for Apache 2.4 and 2.2
+<FilesMatch "(^\.|\.(bak|config|sql|ini|log|sh|env)|~)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 3. HTTP Security Headers
+<IfModule mod_headers.c>
+    # Prevent MIME-type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Prevent Clickjacking (disallow framing)
+    Header always set X-Frame-Options "DENY"
+
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Permissions Policy (Restrict unnecessary browser APIs)
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
+
+    # HTTP Strict Transport Security (HSTS - 1 year)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Content Security Policy (CSP)
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; frame-ancestors 'none'; form-action 'self' https://wa.me;"
+</IfModule>

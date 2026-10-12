@@ -1,0 +1,3 @@
+# Block access to .git metadata and all dotfiles
+/.git/*    /404.html    404!
+/.*        /404.html    404!

@@ -52,7 +52,10 @@ function initParishCalendar() {
       const dayNum = prevMonthDays - x + 1;
       const cell = document.createElement('div');
       cell.className = 'cal-day other-month';
-      cell.innerHTML = `<span class="cal-day-num">${dayNum}</span>`;
+      const numSpan = document.createElement('span');
+      numSpan.className = 'cal-day-num';
+      numSpan.textContent = dayNum;
+      cell.appendChild(numSpan);
       calendarGrid.appendChild(cell);
     }
 
@@ -69,35 +72,38 @@ function initParishCalendar() {
 
       if (isToday) cell.classList.add('is-today');
 
+      const dayNum = document.createElement('span');
+      dayNum.className = 'cal-day-num';
+      dayNum.textContent = d;
+      cell.appendChild(dayNum);
+
       // Check for events matching day
       const daysEvents = parishEvents.filter(ev => ev.day === d);
-
-      let eventsHtml = '';
       if (daysEvents.length > 0) {
-        eventsHtml = `<div class="cal-event-chips">` +
-          daysEvents.map(ev => `
-            <button type="button" class="cal-event-chip chip-${ev.type}" data-title="${ev.title}" data-time="${ev.time}" data-desc="${ev.desc}">
-              ${ev.title}
-            </button>
-          `).join('') + `</div>`;
+        const chipsContainer = document.createElement('div');
+        chipsContainer.className = 'cal-event-chips';
+
+        daysEvents.forEach(ev => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = `cal-event-chip chip-${ev.type || 'mass'}`;
+          btn.textContent = ev.title;
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openEventModal({
+              title: ev.title,
+              time: ev.time,
+              desc: ev.desc
+            });
+          });
+          chipsContainer.appendChild(btn);
+        });
+
+        cell.appendChild(chipsContainer);
       }
 
-      cell.innerHTML = `<span class="cal-day-num">${d}</span>${eventsHtml}`;
       calendarGrid.appendChild(cell);
     }
-
-    // Attach Event Details Listener
-    const chips = calendarGrid.querySelectorAll('.cal-event-chip');
-    chips.forEach(chip => {
-      chip.addEventListener('click', (e) => {
-        e.stopPropagation();
-        openEventModal({
-          title: chip.getAttribute('data-title'),
-          time: chip.getAttribute('data-time'),
-          desc: chip.getAttribute('data-desc')
-        });
-      });
-    });
   }
 
   function openEventModal(eventData) {

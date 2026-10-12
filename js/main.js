@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initAutoScrollTracks();
   initQuickAccessMobileSliding();
   initLiturgicalTabs();
+  initLeadershipCards();
+  initImageErrorHandling();
 });
 
 function removeExternalImages() {
@@ -590,6 +592,47 @@ function initLiturgicalTabs() {
       }
     });
   });
+}
+
+/**
+ * Leadership Cards Mobile/Tap Interaction (Extracted from inline script for CSP compliance)
+ */
+function initLeadershipCards() {
+  const leaderCards = document.querySelectorAll('.about-leader-card');
+  if (!leaderCards.length) return;
+
+  leaderCards.forEach(card => {
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('.leader-btn')) return;
+      const isActive = card.classList.contains('active');
+      leaderCards.forEach(c => c.classList.remove('active'));
+      if (!isActive) {
+        card.classList.add('active');
+      }
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.about-leader-card')) {
+      leaderCards.forEach(card => card.classList.remove('active'));
+    }
+  });
+}
+
+/**
+ * Centralized, CSP-Compliant Image Fallback Handling
+ * Replaces all unsafe inline onerror="..." attributes
+ */
+function initImageErrorHandling() {
+  document.addEventListener('error', function (e) {
+    if (e.target && e.target.tagName && e.target.tagName.toLowerCase() === 'img') {
+      const img = e.target;
+      if (!img.dataset.hasFailed) {
+        img.dataset.hasFailed = 'true';
+        img.src = 'images/hero_opt.jpg';
+      }
+    }
+  }, true); // Capture phase required because image error events do not bubble
 }
 
 

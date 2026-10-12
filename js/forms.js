@@ -81,9 +81,33 @@ function validateEmail(email) {
  * 2. Form Submission Success & Modal Handler
  */
 function handleFormSuccess(form) {
+  // Anti-bot honeypot check: reject if honeypot field is filled
+  const honeypot = form.querySelector('[name="website_hp"]');
+  if (honeypot && honeypot.value.trim() !== '') {
+    form.reset();
+    return;
+  }
+
+  // Prevent double submissions / flood attacks
+  const submitBtn = form.querySelector('[type="submit"]');
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    setTimeout(() => { submitBtn.disabled = false; }, 3000);
+  }
+
+  // Safe input helper with max length trimming
+  const getCleanVal = (input, maxLen = 1000) => {
+    if (!input || !input.value) return '';
+    return input.value.trim().slice(0, maxLen);
+  };
+
   // If form is configured for direct WhatsApp delivery
   if (form.getAttribute('data-whatsapp') === 'true') {
-    const waNumber = form.getAttribute('data-whatsapp-number') || '2348065542337';
+    let rawWaNumber = form.getAttribute('data-whatsapp-number') || '2348065542337';
+    // Validate number contains only digits and has realistic phone length
+    const cleanWaNumber = rawWaNumber.replace(/[^0-9]/g, '');
+    const waNumber = /^[0-9]{10,15}$/.test(cleanWaNumber) ? cleanWaNumber : '2348065542337';
+
     let messageText = "Good day Catechist,\nI am sending a message from the church website:\n\n";
 
     const nameInput = form.querySelector('[name="requestor_name"]') || form.querySelector('[name="name"]') || form.querySelector('#requestor-name') || form.querySelector('#contact-name');
@@ -91,17 +115,22 @@ function handleFormSuccess(form) {
     const subjectInput = form.querySelector('[name="subject"]') || form.querySelector('#contact-subject');
     const detailsInput = form.querySelector('[name="intention_for"]') || form.querySelector('[name="message"]') || form.querySelector('#intention-for') || form.querySelector('#contact-message');
 
-    if (nameInput && nameInput.value.trim()) {
-      messageText += `*Name:* ${nameInput.value.trim()}\n`;
+    const cleanName = getCleanVal(nameInput, 100);
+    const cleanPhone = getCleanVal(phoneInput, 25);
+    const cleanSubject = getCleanVal(subjectInput, 150);
+    const cleanDetails = getCleanVal(detailsInput, 1500);
+
+    if (cleanName) {
+      messageText += `*Name:* ${cleanName}\n`;
     }
-    if (phoneInput && phoneInput.value.trim()) {
-      messageText += `*Phone:* ${phoneInput.value.trim()}\n`;
+    if (cleanPhone) {
+      messageText += `*Phone:* ${cleanPhone}\n`;
     }
-    if (subjectInput && subjectInput.value.trim()) {
-      messageText += `*Subject:* ${subjectInput.value.trim()}\n`;
+    if (cleanSubject) {
+      messageText += `*Subject:* ${cleanSubject}\n`;
     }
-    if (detailsInput && detailsInput.value.trim()) {
-      messageText += `*Message / Details:* ${detailsInput.value.trim()}\n`;
+    if (cleanDetails) {
+      messageText += `*Message / Details:* ${cleanDetails}\n`;
     }
 
     const encodedMessage = encodeURIComponent(messageText);

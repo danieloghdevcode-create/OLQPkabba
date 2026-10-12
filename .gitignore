@@ -11,3 +11,11 @@ desktop.ini
 
 # Temporary and log files
 *.log
+
+# Sensitive environment and backup files
+.env
+.env.*
+*.bak
+*.sql
+*.backup
+*.dump
