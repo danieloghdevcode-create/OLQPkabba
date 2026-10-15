@@ -288,71 +288,81 @@
   <div class="modal-overlay" id="bank-details-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bank-modal-title">
     <div class="modal-dialog bank-modal-dialog">
       <div class="bank-modal-header">
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--color-gold-500); display: flex; align-items: center; justify-content: center; color: var(--color-primary-950); flex-shrink: 0;">
+        <div class="bank-modal-header-info">
+          <div class="bank-modal-header-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
           </div>
           <div>
-            <h3 id="bank-modal-title" style="color: white; margin: 0; font-size: 1.25rem; font-family: var(--font-heading); line-height: 1.2;">Direct Parish Contribution</h3>
-            <span style="font-size: 0.8rem; color: var(--color-gold-400);">Official Bank Wire & Mobile Transfer</span>
+            <h3 id="bank-modal-title" class="bank-modal-title">Direct Parish Contribution</h3>
+            <span class="bank-modal-subtitle">Official Bank Wire & Mobile Transfer</span>
           </div>
         </div>
-        <button type="button" class="modal-close-btn" aria-label="Close modal" style="color: white; background: rgba(255,255,255,0.15); border: none; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s;">
+        <button type="button" class="modal-close-btn" aria-label="Close modal">
           <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </div>
 
       <div class="bank-modal-body">
-        <p style="font-size: 0.95rem; color: var(--color-charcoal-700); margin-bottom: var(--space-lg); line-height: 1.5;">
-          You can transfer your contributions, tithes, thanksgiving, or offerings directly to the official parish bank account:
+        <p class="bank-modal-lead">
+          Transfer your contributions, tithes, thanksgiving, or offerings directly to the official parish bank account:
         </p>
 
         <!-- Official Bank Account Card -->
         <div class="bank-card-container">
-          <div style="margin-bottom: var(--space-md);">
+          <div class="bank-card-item">
             <span class="bank-field-label">Bank Name</span>
             <span class="bank-field-val">First Bank of Nigeria</span>
           </div>
 
-          <div style="margin-bottom: var(--space-md);">
+          <div class="bank-card-item">
             <span class="bank-field-label">Account Name</span>
             <span class="bank-field-val">Our Lady Queen of Peace</span>
           </div>
 
-          <div>
+          <div class="bank-card-item">
             <span class="bank-field-label">Account Number</span>
             <div class="bank-acc-row">
               <span id="bank-acc-num" class="bank-acc-number">2009918887</span>
-              <button type="button" id="copy-acc-btn" class="btn btn-sm btn-secondary" style="padding: 6px 14px; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px;" aria-label="Copy Account Number">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              <button type="button" id="copy-acc-btn" class="bank-copy-btn" aria-label="Copy Account Number">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
                 <span id="copy-btn-text">Copy</span>
               </button>
             </div>
-            <div id="copy-feedback" style="display: none; font-size: 0.82rem; color: var(--color-success); font-weight: 600; margin-top: 6px;">
+            <div id="copy-feedback" class="bank-copy-feedback" style="display: none;">
               ✓ Account number copied to clipboard!
             </div>
           </div>
         </div>
 
-        <!-- Note specified by User -->
+        <!-- Transfer Narration Guidance Box -->
         <div class="bank-note-box">
-          <div style="display: flex; gap: 10px; align-items: flex-start;">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="#855b00" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-            <div>
-              <strong style="color: #634300; display: block; font-size: 0.95rem; margin-bottom: 2px;">Please Note:</strong>
-              <p style="margin: 0; font-size: 0.92rem; color: #523700; line-height: 1.45;">
-                Please indicate why you send this money in your bank transfer narration / remarks (e.g., <em>Sunday Tithe</em>, <em>Building Project</em>, <em>Thanksgiving</em>, <em>Mass Offering</em>, or <em>Charity</em>).
+          <div class="bank-note-inner">
+            <div class="bank-note-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            </div>
+            <div class="bank-note-text">
+              <strong>Transfer Narration / Remarks:</strong>
+              <p>
+                Please write the purpose of your offering in your bank transfer narration so the parish can record and direct your contribution properly:
               </p>
+              <div class="narration-tags" aria-label="Common transfer purposes">
+                <span class="narration-tag">Sunday Tithe</span>
+                <span class="narration-tag">Building Project</span>
+                <span class="narration-tag">Thanksgiving</span>
+                <span class="narration-tag">Mass Offering</span>
+                <span class="narration-tag">Parish Charity</span>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Actions -->
-        <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap; justify-content: flex-end; align-items: center; margin-top: var(--space-lg);">
-          <a href="https://wa.me/2348065542337?text=Hello%20Catechist%2C%20I%20have%20sent%20a%20direct%20parish%20contribution%20to%20First%20Bank%202009918887.%20Here%20are%20my%20details:" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.9rem;">
-            Send Receipt via WhatsApp &rarr;
+        <div class="bank-modal-actions">
+          <a href="https://wa.me/2348065542337?text=Hello%20Catechist%2C%20I%20have%20sent%20a%20direct%20parish%20contribution%20to%20First%20Bank%202009918887.%20Here%20are%20my%20details:" target="_blank" rel="noopener noreferrer" class="bank-action-btn bank-action-whatsapp">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.1 21.5h-.1c-1.7 0-3.4-.5-4.8-1.4l-.3-.2-3.9 1 1-3.8-.2-.3a9.7 9.7 0 1 1 8.3 4.7Zm5.3-7.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.6-1.4-3.6-3.2-.3-.5.3-.5.8-1.6.1-.2.1-.4 0-.6l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.7-.1 1.7-.7 1.9-1.3.2-.6.2-1.1.1-1.2-.1-.2-.3-.3-.6-.4Z"/></svg>
+            <span>Send Receipt via WhatsApp</span>
           </a>
-          <button type="button" class="btn btn-primary btn-close-modal" style="font-size: 0.9rem;">Close</button>
+          <button type="button" class="bank-action-btn bank-action-close btn-close-modal">Close</button>
         </div>
       </div>
     </div>

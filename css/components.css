@@ -1847,46 +1847,110 @@ textarea.form-control {
   transform: translateY(1px) scale(0.98);
 }
 
+/* ==========================================================================
+   BANK DETAILS MODAL — Architectural Responsive Styling
+   ========================================================================== */
 .bank-modal-dialog {
-  max-width: 540px;
-  width: 92%;
-  border-radius: var(--radius-xl);
-  box-shadow: 0 20px 45px rgba(6, 26, 46, 0.35);
+  max-width: 520px;
+  width: 94%;
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(6, 26, 46, 0.4), 0 0 0 1px rgba(212, 175, 55, 0.25);
   border: 1px solid var(--color-border);
+  overflow: hidden;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .bank-modal-header {
   background: linear-gradient(135deg, var(--color-primary-950) 0%, var(--color-primary-900) 100%);
   color: var(--color-white);
-  padding: var(--space-lg) var(--space-xl);
+  padding: 16px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid var(--color-gold-500);
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.bank-modal-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.bank-modal-header-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-gold-400), var(--color-gold-600));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-950);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bank-modal-title {
+  color: var(--color-white);
+  margin: 0;
+  font-size: 1.18rem;
+  font-family: var(--font-heading);
+  line-height: 1.25;
+}
+
+.bank-modal-subtitle {
+  font-size: 0.78rem;
+  color: var(--color-gold-300);
+  display: block;
+  margin-top: 2px;
 }
 
 .bank-modal-body {
-  padding: var(--space-xl);
+  padding: 22px;
   background: var(--color-white);
+  overflow-y: auto;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bank-modal-lead {
+  font-size: 0.92rem;
+  color: var(--color-charcoal-700);
+  margin: 0 0 16px;
+  line-height: 1.5;
 }
 
 .bank-card-container {
-  background: var(--color-cream-100);
-  border: 2px solid var(--color-gold-500);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  margin-bottom: var(--space-lg);
-  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.12);
+  background: linear-gradient(180deg, #fdfbf7 0%, #faf6ec 100%);
+  border: 1.5px solid rgba(212, 175, 55, 0.45);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 18px rgba(11, 44, 74, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+}
+
+.bank-card-item {
+  margin-bottom: 14px;
+}
+
+.bank-card-item:last-child {
+  margin-bottom: 0;
 }
 
 .bank-field-label {
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-charcoal-muted);
+  color: var(--color-charcoal-muted, #64748b);
   display: block;
-  margin-bottom: 3px;
-  font-weight: 600;
+  margin-bottom: 4px;
+  font-weight: 700;
 }
 
 .bank-field-val {
@@ -1894,6 +1958,7 @@ textarea.form-control {
   color: var(--color-primary-950);
   font-weight: 700;
   display: block;
+  line-height: 1.3;
 }
 
 .bank-acc-row {
@@ -1901,25 +1966,241 @@ textarea.form-control {
   align-items: center;
   justify-content: space-between;
   background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 8px 14px;
+  border: 1.5px solid rgba(212, 175, 55, 0.45);
+  border-radius: 12px;
+  padding: 8px 10px 8px 14px;
   gap: 10px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .bank-acc-number {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 1.45rem;
-  font-weight: 700;
-  color: var(--color-primary-900);
+  font-size: clamp(1.18rem, 4.4vw, 1.45rem);
+  font-weight: 800;
+  color: var(--color-primary-950);
   letter-spacing: 0.08em;
+  user-select: all;
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+.bank-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #071e34 0%, #0b2c4a 100%);
+  color: var(--color-gold-300, #edd88d);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(11, 44, 74, 0.15);
+}
+
+.bank-copy-btn:hover {
+  background: linear-gradient(135deg, #0b2c4a 0%, #175480 100%);
+  color: #fff9e6;
+  border-color: var(--color-gold-400, #e2c45f);
+  transform: translateY(-1px);
+}
+
+.bank-copy-feedback {
+  font-size: 0.82rem;
+  color: #15803d;
+  font-weight: 700;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Alert / Narration Box */
 .bank-note-box {
-  background: #fff8e6;
-  border-left: 4px solid var(--color-gold-600);
-  padding: var(--space-md);
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  margin-bottom: var(--space-lg);
+  background: #fdfbf7;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-left: 4px solid var(--color-gold-500);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+}
+
+.bank-note-inner {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.bank-note-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--color-gold-700, #966b08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.bank-note-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.bank-note-text strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--color-primary-950);
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.bank-note-text p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--color-charcoal-700, #374151);
+  line-height: 1.5;
+}
+
+.narration-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.narration-tag {
+  font-size: 0.74rem;
+  font-weight: 700;
+  background: var(--color-white);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: var(--color-primary-900);
+  padding: 3px 8px;
+  border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* Action buttons */
+.bank-modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bank-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.bank-action-whatsapp {
+  background: linear-gradient(135deg, #071e34 0%, #0b2c4a 100%);
+  color: var(--color-gold-300, #edd88d);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 4px 12px rgba(11, 44, 74, 0.15);
+}
+
+.bank-action-whatsapp:hover {
+  background: linear-gradient(135deg, #0b2c4a 0%, #175480 100%);
+  color: #fff9e6;
+  border-color: var(--color-gold-400);
+  transform: translateY(-1px);
+}
+
+.bank-action-close {
+  background: var(--color-cream-100, #f7f3ea);
+  color: var(--color-charcoal-700, #374151);
+  border: 1px solid var(--color-border);
+}
+
+.bank-action-close:hover {
+  background: var(--color-cream-200, #ebe4d3);
+  color: var(--color-primary-950);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .bank-modal-dialog {
+    width: 95%;
+    border-radius: 16px;
+  }
+
+  .bank-modal-header {
+    padding: 14px 16px;
+  }
+
+  .bank-modal-title {
+    font-size: 1.05rem;
+  }
+
+  .bank-modal-body {
+    padding: 16px 14px;
+  }
+
+  .bank-card-container {
+    padding: 14px 12px;
+  }
+
+  .bank-field-val {
+    font-size: 1.05rem;
+  }
+
+  .bank-note-box {
+    padding: 12px;
+  }
+
+  .bank-modal-actions {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .bank-action-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .bank-acc-row {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 12px 10px;
+    gap: 10px;
+  }
+
+  .bank-acc-number {
+    text-align: center;
+    display: block;
+    font-size: 1.32rem;
+  }
+
+  .bank-copy-btn {
+    width: 100%;
+  }
 }
 
