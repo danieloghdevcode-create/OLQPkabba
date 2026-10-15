@@ -687,104 +687,204 @@
   flex-wrap: wrap;
 }
 
+/* ==========================================================================
+   MINISTRY CARDS — Architectural Catholic Aesthetics
+   ========================================================================== */
 .ministry-card {
   display: flex;
   flex-direction: column;
   height: 100%;
+  background: var(--color-white);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--color-border, #e8e2d5);
+  box-shadow: 0 4px 20px rgba(11, 44, 74, 0.07);
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
 }
 
-.ministry-card-body {
+.ministry-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(11, 44, 74, 0.14), 0 0 0 1px rgba(212, 175, 55, 0.45);
+  border-color: rgba(212, 175, 55, 0.65);
+}
+
+.ministry-card .card-img-wrap {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  background: var(--color-primary-950);
+}
+
+.ministry-card .card-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 44, 74, 0) 55%, rgba(11, 44, 74, 0.22) 100%);
+  pointer-events: none;
+}
+
+.ministry-card .card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ministry-card:hover .card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.ministry-card .card-body,
+.ministry-card .ministry-card-body {
+  padding: 24px 24px 24px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  background: var(--color-white);
+}
+
+.ministry-card .ministry-meeting {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-gold-800, #7d5b03);
+  background: var(--color-cream-100, #faf7f0);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  width: fit-content;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  line-height: 1.3;
+}
+
+.ministry-card .ministry-meeting svg {
+  width: 13px;
+  height: 13px;
+  min-width: 13px;
+  fill: var(--color-gold-600, #855b00);
+  flex-shrink: 0;
+}
+
+.ministry-card .ministry-category {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-gold-600);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.ministry-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+  margin: 0 0 10px;
+  line-height: 1.32;
+  letter-spacing: 0.01em;
+  min-height: 2.7rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.25s ease;
+}
+
+.ministry-card:hover h3 {
+  color: var(--color-primary-700);
+}
+
+.ministry-card p {
+  font-size: 0.92rem;
+  color: var(--color-charcoal-light, #525257);
+  line-height: 1.62;
+  margin: 0 0 18px;
+  flex-grow: 1;
+}
+
+.ministry-card .card-footer {
+  padding: 16px 0 0 0 !important;
+  background: transparent !important;
+  border-top: 1px solid var(--color-border-light, #f2eee6) !important;
+  margin-top: auto;
+  border-radius: 0 !important;
 }
 
 .ministry-contact-actions {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-top: auto;
-  padding-top: var(--space-md);
   width: 100%;
+  display: flex;
+  margin-top: auto;
+  padding-top: 0;
 }
 
 .ministry-contact-button {
-  flex: 1 1 0;
+  width: 100%;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  min-height: 42px;
-  min-width: 0 !important;
-  padding: 10px 14px !important;
-  border: 1px solid transparent;
+  gap: 9px;
+  background: linear-gradient(135deg, #071e34 0%, #0b2c4a 100%) !important;
+  color: var(--color-gold-300, #edd88d) !important;
+  border: 1px solid rgba(212, 175, 55, 0.45) !important;
+  min-height: 44px;
+  padding: 11px 22px !important;
   border-radius: 999px !important;
-  box-shadow: 0 4px 10px rgba(6, 26, 46, 0.12);
-  letter-spacing: 0.01em;
   font-weight: 700;
-  font-size: 0.84rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
   text-decoration: none;
   box-sizing: border-box;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 14px rgba(11, 44, 74, 0.22);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
 }
 
 .ministry-contact-button svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
   flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .ministry-contact-button:hover,
 .ministry-contact-button:focus-visible {
-  color: var(--color-white) !important;
+  background: linear-gradient(135deg, #0b2c4a 0%, #175480 100%) !important;
+  color: #fff9e6 !important;
+  border-color: var(--color-gold-400, #e2c45f) !important;
   transform: translateY(-2px);
-  box-shadow: 0 7px 16px rgba(6, 26, 46, 0.2);
+  box-shadow: 0 8px 24px rgba(11, 44, 74, 0.32), 0 0 14px rgba(212, 175, 55, 0.25) !important;
 }
 
-.ministry-contact-whatsapp {
-  background: #25D366 !important;
+.ministry-contact-button:hover svg {
+  transform: scale(1.15);
 }
 
-.ministry-contact-whatsapp:hover,
-.ministry-contact-whatsapp:focus-visible {
-  background: #1eb956 !important;
-}
-
-.ministry-contact-call {
-  background: var(--color-primary-900) !important;
-}
-
-.ministry-contact-call:hover,
-.ministry-contact-call:focus-visible {
-  background: var(--color-primary-800) !important;
-}
-
-/* Ministry Meeting Schedule Badge & Icon */
-.ministry-meeting {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--color-gold-700, #b8860b);
-  background: rgba(212, 175, 55, 0.08);
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  margin-bottom: var(--space-sm);
-  line-height: 1.3;
-}
-
-.ministry-meeting svg {
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
-  min-height: 16px;
-  fill: currentColor;
-  flex-shrink: 0;
+@media (max-width: 640px) {
+  .card-grid-3 {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .ministry-card .card-body,
+  .ministry-card .ministry-card-body {
+    padding: 20px 18px 20px;
+  }
+  .ministry-card h3 {
+    min-height: auto;
+  }
 }
 
 .card:hover,
 .schedule-card:hover,
-.ministry-card:hover,
 .event-card:hover,
 .feature-card:hover {
   transform: translateY(-5px);
@@ -802,7 +902,6 @@
   background: var(--color-cream-50);
 }
 
-.ministry-card img,
 .event-card img {
   width: 100%;
   height: 200px;
@@ -810,7 +909,6 @@
   transition: transform 0.4s ease;
 }
 
-.ministry-card:hover img,
 .event-card:hover img {
   transform: scale(1.04);
 }
